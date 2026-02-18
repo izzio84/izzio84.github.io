@@ -5,243 +5,279 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Roadtrip Scozia – Aprile 2025</title>
 <style>
-  :root {
-    --navy:#1A3A5C; --blue:#2E6DA4; --sky:#D6E8F7; --green:#1F6B3B;
-    --mint:#D4EFDF; --orange:#E07B39; --yellow:#FFF3CD; --red:#C0392B;
-    --purple:#6B3FA0; --lavender:#EDE7F6; --gray:#F7F9FC; --white:#fff;
-    --shadow:0 2px 12px rgba(26,58,92,.13);
-    --radius:12px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:'Segoe UI',Arial,sans-serif;background:#f0f4f8;color:#222;min-height:100vh}
-  
-  /* HERO */
-  .hero{background:linear-gradient(135deg,#1A3A5C 0%,#2E6DA4 60%,#4A90D9 100%);
-        color:#fff;text-align:center;padding:40px 20px 30px;position:relative;overflow:hidden}
-  .hero::before{content:'';position:absolute;top:-60px;right:-80px;width:300px;height:300px;
-    background:rgba(255,255,255,.06);border-radius:50%}
-  .hero h1{font-size:clamp(1.6rem,4vw,2.8rem);font-weight:800;letter-spacing:-1px;margin-bottom:8px}
-  .hero .sub{font-size:1rem;opacity:.85;margin-bottom:18px}
-  .hero .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:12px}
-  .chip{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);
-        border-radius:20px;padding:5px 14px;font-size:.82rem;font-weight:600;backdrop-filter:blur(4px)}
+:root{--navy:#1A3A5C;--blue:#2E6DA4;--sky:#D6E8F7;--green:#1F6B3B;--mint:#D4EFDF;
+  --orange:#E07B39;--yellow:#FFF3CD;--red:#C0392B;--purple:#6B3FA0;--whisky:#8B4513;
+  --gold:#FFF0D0;--goldark:#7D5A0A;--shadow:0 2px 12px rgba(26,58,92,.13);--r:12px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f0f4f8;color:#222;min-height:100vh}
+.hero{background:linear-gradient(135deg,#1A3A5C 0%,#2E6DA4 60%,#4A90D9 100%);
+  color:#fff;text-align:center;padding:36px 20px 28px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-60px;right:-80px;width:300px;height:300px;
+  background:rgba(255,255,255,.06);border-radius:50%}
+.hero h1{font-size:clamp(1.5rem,4vw,2.6rem);font-weight:800;letter-spacing:-1px;margin-bottom:6px}
+.hero .sub{font-size:.95rem;opacity:.85;margin-bottom:14px}
+.hero .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin-top:10px}
+.chip{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);
+  border-radius:20px;padding:4px 12px;font-size:.8rem;font-weight:600}
+.flight-strip{background:rgba(0,0,0,.25);border-radius:10px;margin:14px auto 0;
+  max-width:720px;padding:10px 16px;display:flex;flex-wrap:wrap;
+  justify-content:center;gap:14px;font-size:.83rem}
+.fl-item{display:flex;align-items:center;gap:6px}
+.fl-item span{opacity:.8}.fl-item strong{color:#FFE082}
+.tabs-wrap{background:var(--navy);position:sticky;top:0;z-index:100;
+  box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.tabs{display:flex;overflow-x:auto;scrollbar-width:none;max-width:1300px;margin:0 auto}
+.tabs::-webkit-scrollbar{display:none}
+.tab{padding:13px 16px;color:rgba(255,255,255,.7);font-size:.85rem;font-weight:600;
+  cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;
+  transition:all .2s;user-select:none;flex-shrink:0}
+.tab:hover{color:#fff;background:rgba(255,255,255,.08)}
+.tab.active{color:#fff;border-bottom-color:#4A90D9}
+.main{max-width:1280px;margin:0 auto;padding:26px 14px 60px}
+.section{display:none}.section.active{display:block}
+.sec-head{background:linear-gradient(90deg,var(--navy),var(--blue));color:#fff;
+  border-radius:var(--r) var(--r) 0 0;padding:16px 22px;margin-bottom:0}
+.sec-head h2{font-size:1.25rem;font-weight:800}.sec-head p{font-size:.85rem;opacity:.8;margin-top:3px}
+.card{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);margin-bottom:16px;overflow:hidden}
 
-  /* NAV TABS */
-  .tabs-wrap{background:var(--navy);position:sticky;top:0;z-index:100;
-             box-shadow:0 2px 8px rgba(0,0,0,.25)}
-  .tabs{display:flex;overflow-x:auto;scrollbar-width:none;max-width:1200px;margin:0 auto}
-  .tabs::-webkit-scrollbar{display:none}
-  .tab{padding:14px 18px;color:rgba(255,255,255,.7);font-size:.88rem;font-weight:600;
-       cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;
-       transition:all .2s;user-select:none;flex-shrink:0}
-  .tab:hover{color:#fff;background:rgba(255,255,255,.08)}
-  .tab.active{color:#fff;border-bottom-color:#4A90D9}
+/* VOLO STRIP */
+.volo-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:18px}
+.volo-card{border-radius:10px;padding:16px;display:flex;align-items:flex-start;gap:14px}
+.volo-icon{font-size:2.2rem;flex-shrink:0}
+.volo-info h3{font-size:1rem;font-weight:800;margin-bottom:6px}
+.volo-info .volo-row{font-size:.83rem;margin-bottom:3px;display:flex;gap:6px}
+.volo-info .vt{font-weight:700;min-width:90px;color:#555}
+.volo-tip{background:#FFF8DC;border-left:4px solid var(--orange);
+  padding:10px 14px;margin:0 18px 18px;border-radius:0 8px 8px 0;font-size:.83rem}
 
-  /* MAIN */
-  .main{max-width:1200px;margin:0 auto;padding:28px 16px 60px}
-  .section{display:none}.section.active{display:block}
-  
-  /* SECTION HEADER */
-  .sec-head{background:linear-gradient(90deg,var(--navy),var(--blue));color:#fff;
-            border-radius:var(--radius) var(--radius) 0 0;padding:18px 24px;margin-bottom:0}
-  .sec-head h2{font-size:1.35rem;font-weight:800}
-  .sec-head p{font-size:.87rem;opacity:.8;margin-top:4px}
+/* HOTEL */
+.hotel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;padding:16px}
+.hotel-card{background:#f7f9fc;border-radius:10px;padding:14px;border-left:4px solid var(--blue);position:relative}
+.hotel-card h3{font-size:.9rem;color:var(--navy);font-weight:700;margin-bottom:5px}
+.hotel-card .meta{font-size:.78rem;color:#555;display:flex;flex-direction:column;gap:2px}
+.hotel-card .price{font-size:1.05rem;font-weight:800;color:var(--green);margin-top:6px}
+.hotel-card a{font-size:.75rem;color:var(--blue);text-decoration:none;font-weight:600}
+.colaz-badge{position:absolute;top:10px;right:10px;font-size:.7rem;font-weight:700;
+  padding:2px 7px;border-radius:8px}
+.colaz-yes{background:#D4EFDF;color:#1F6B3B}
+.colaz-no{background:#FADBD8;color:#C0392B}
 
-  /* CARDS */
-  .card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);
-        margin-bottom:18px;overflow:hidden}
-  .card-head{padding:14px 20px;font-weight:700;font-size:1rem;
-             display:flex;align-items:center;gap:10px;cursor:pointer;
-             transition:filter .15s}
-  .card-head:hover{filter:brightness(.95)}
-  .card-body{padding:0 0 0 0;display:none}
-  .card-body.open{display:block}
-  .card-head .arrow{margin-left:auto;transition:transform .25s;font-size:.8rem;opacity:.7}
-  .card-head.expanded .arrow{transform:rotate(180deg)}
+.total-box{background:linear-gradient(135deg,var(--green),#2E9E57);color:#fff;
+  border-radius:10px;padding:14px 22px;display:flex;justify-content:space-between;
+  align-items:center;margin:0 16px 16px}
+.total-box .label{font-size:.9rem;font-weight:600;opacity:.9}
+.total-box .amount{font-size:1.7rem;font-weight:900}
 
-  /* PANORAMICA */
-  .hotel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-              gap:14px;padding:20px}
-  .hotel-card{background:var(--gray);border-radius:10px;padding:16px;border-left:4px solid var(--blue)}
-  .hotel-card h3{font-size:.95rem;color:var(--navy);font-weight:700;margin-bottom:6px}
-  .hotel-card .meta{font-size:.82rem;color:#555;display:flex;flex-direction:column;gap:3px}
-  .hotel-card .price{font-size:1.1rem;font-weight:800;color:var(--green);margin-top:8px}
-  .hotel-card a{font-size:.78rem;color:var(--blue);text-decoration:none;font-weight:600}
-  .hotel-card a:hover{text-decoration:underline}
-  
-  .total-box{background:linear-gradient(135deg,var(--green),#2E9E57);color:#fff;
-             border-radius:10px;padding:16px 24px;display:flex;
-             justify-content:space-between;align-items:center;margin:0 20px 20px}
-  .total-box .label{font-size:.95rem;font-weight:600;opacity:.9}
-  .total-box .amount{font-size:1.8rem;font-weight:900}
+/* ROUTE */
+.route-wrap{padding:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+.route-card{border-radius:10px;padding:13px 15px;color:#fff;position:relative;overflow:hidden}
+.route-card h3{font-size:.83rem;font-weight:700;margin-bottom:2px}
+.route-card .loc{font-size:.95rem;font-weight:800;margin-bottom:6px}
+.route-card .details{font-size:.76rem;opacity:.85;line-height:1.5}
+.route-card .km-badge{position:absolute;top:10px;right:12px;font-size:.75rem;
+  background:rgba(255,255,255,.22);border-radius:10px;padding:2px 7px;font-weight:700}
+.whisky-stops{font-size:.73rem;background:rgba(255,255,255,.15);border-radius:6px;
+  padding:3px 7px;margin-top:5px;display:inline-block}
 
-  /* ROUTE SUMMARY */
-  .route-wrap{padding:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
-  .route-card{border-radius:10px;padding:14px 16px;color:#fff;position:relative;overflow:hidden}
-  .route-card::after{content:'';position:absolute;bottom:-20px;right:-20px;
-    width:80px;height:80px;background:rgba(255,255,255,.08);border-radius:50%}
-  .route-card h3{font-size:.88rem;font-weight:700;margin-bottom:4px}
-  .route-card .loc{font-size:1rem;font-weight:800;margin-bottom:8px}
-  .route-card .details{font-size:.78rem;opacity:.85;line-height:1.5}
-  .route-card .km{position:absolute;top:12px;right:14px;font-size:.8rem;
-                  background:rgba(255,255,255,.2);border-radius:12px;padding:2px 8px;font-weight:700}
+/* ITINERARIO */
+.day-card{margin-bottom:14px;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.day-head{padding:14px 18px;color:#fff;cursor:pointer;display:flex;align-items:center;gap:10px}
+.day-head:hover{filter:brightness(1.07)}
+.day-badge{background:rgba(255,255,255,.25);border-radius:7px;padding:5px 10px;
+  font-size:.75rem;font-weight:700;white-space:nowrap;text-align:center;line-height:1.4}
+.day-title{flex:1;font-size:.95rem;font-weight:700}
+.day-arrow{font-size:.75rem;opacity:.7;transition:transform .25s;flex-shrink:0}
+.day-head.expanded .day-arrow{transform:rotate(180deg)}
+.day-body{background:#fff;display:none}
+.day-body.open{display:block}
+.timeline{padding:14px 18px;display:flex;flex-direction:column;gap:0}
+.tl-item{display:grid;grid-template-columns:85px 1fr;gap:12px;padding:9px 0;
+  border-bottom:1px solid #f0f0f0;align-items:start}
+.tl-item:last-child{border-bottom:none}
+.tl-item.is-whisky{background:#FFFBF0;margin:0 -18px;padding:9px 18px}
+.tl-item.is-lunch{background:#F0FFF4;margin:0 -18px;padding:9px 18px}
+.tl-time{font-size:.78rem;color:var(--blue);font-weight:700;padding-top:2px}
+.tl-item.is-whisky .tl-time{color:var(--whisky)}
+.tl-item.is-lunch .tl-time{color:#1B5E20}
+.tl-content h4{font-size:.88rem;font-weight:700;color:#1a1a2e;margin-bottom:3px}
+.tl-item.is-whisky .tl-content h4{color:var(--whisky)}
+.tl-item.is-lunch .tl-content h4{color:#1B5E20}
+.tl-content p{font-size:.79rem;color:#555;line-height:1.45}
+.meta-row{display:flex;flex-wrap:wrap;gap:5px;margin-top:4px}
+.badge{font-size:.7rem;padding:2px 7px;border-radius:10px;font-weight:600}
+.b-cost{background:#FEF9E7;color:#7D6608;border:1px solid #F9E79F}
+.b-dur{background:#EBF5FB;color:#1A5276;border:1px solid #AED6F1}
+.b-warn{background:#FDEDEC;color:#922B21;border:1px solid #F5B7B1}
+.b-ok{background:var(--mint);color:var(--green);border:1px solid #A9DFBF}
+.b-whisky{background:#FFF0D0;color:#7D5A0A;border:1px solid #F0C070}
+.b-lunch{background:#E8F5E9;color:#1B5E20;border:1px solid #A5D6A7}
 
-  /* ITINERARIO */
-  .day-card{margin-bottom:16px;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
-  .day-head{padding:16px 20px;color:#fff;cursor:pointer;display:flex;
-            align-items:center;gap:12px;transition:filter .15s}
-  .day-head:hover{filter:brightness(1.08)}
-  .day-badge{background:rgba(255,255,255,.25);border-radius:8px;
-             padding:6px 12px;font-size:.8rem;font-weight:700;white-space:nowrap}
-  .day-title{flex:1;font-size:1rem;font-weight:700}
-  .day-arrow{font-size:.8rem;opacity:.7;transition:transform .25s;flex-shrink:0}
-  .day-body{background:#fff;display:none}
-  .day-body.open{display:block}
-  
-  .timeline{padding:16px 20px;display:flex;flex-direction:column;gap:0}
-  .tl-item{display:grid;grid-template-columns:90px 1fr;gap:14px;padding:10px 0;
-           border-bottom:1px solid #f0f0f0;align-items:start}
-  .tl-item:last-child{border-bottom:none}
-  .tl-time{font-size:.82rem;color:var(--blue);font-weight:700;padding-top:2px}
-  .tl-content h4{font-size:.93rem;font-weight:700;color:#1a1a2e;margin-bottom:3px}
-  .tl-content p{font-size:.82rem;color:#555;line-height:1.5}
-  .tl-content .meta-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:5px}
-  .badge{font-size:.72rem;padding:2px 8px;border-radius:12px;font-weight:600}
-  .badge-cost{background:#FEF9E7;color:#7D6608;border:1px solid #F9E79F}
-  .badge-dur{background:#EBF5FB;color:#1A5276;border:1px solid #AED6F1}
-  .badge-warn{background:#FDEDEC;color:#922B21;border:1px solid #F5B7B1}
-  .badge-ok{background:var(--mint);color:var(--green);border:1px solid #A9DFBF}
+/* DISTILLERIE */
+.distill-intro{background:linear-gradient(135deg,#5D2E0C,#8B4513);color:#fff;
+  border-radius:var(--r) var(--r) 0 0;padding:18px 22px}
+.distill-intro h2{font-size:1.2rem;font-weight:800;margin-bottom:4px}
+.distill-intro p{font-size:.84rem;opacity:.85}
+.regions-strip{display:flex;flex-wrap:wrap;gap:10px;padding:16px;background:#FFF8F0}
+.region-chip{padding:6px 14px;border-radius:20px;font-size:.8rem;font-weight:700;
+  border:2px solid}
+.distill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));
+  gap:14px;padding:16px}
+.distill-card{background:#fff;border-radius:10px;padding:16px;
+  border-top:4px solid var(--whisky);box-shadow:0 1px 6px rgba(0,0,0,.07)}
+.distill-card .d-day{font-size:.7rem;background:var(--navy);color:#fff;
+  border-radius:8px;padding:2px 8px;font-weight:700;margin-bottom:7px;display:inline-block}
+.distill-card h3{font-size:.95rem;font-weight:800;color:var(--whisky);margin-bottom:4px}
+.distill-card .d-region{font-size:.76rem;font-weight:700;margin-bottom:6px}
+.distill-card .d-addr{font-size:.75rem;color:#888;margin-bottom:8px}
+.distill-card .d-type{font-size:.8rem;color:#444;margin-bottom:8px;font-style:italic}
+.distill-card .d-desc{font-size:.8rem;color:#444;line-height:1.45}
+.distill-card .d-bottom{display:flex;justify-content:space-between;align-items:center;
+  margin-top:10px;flex-wrap:wrap;gap:6px}
+.distill-card .d-price{font-weight:700;color:var(--whisky);font-size:.88rem}
+.d-route-badge{font-size:.72rem;background:#FFF0D0;color:#7D5A0A;border-radius:8px;
+  padding:2px 8px;font-weight:700;border:1px solid #F0C070}
+.must-stop{background:linear-gradient(135deg,#5D2E0C,#A0522D);color:#fff;
+  padding:4px 10px;border-radius:8px;font-size:.72rem;font-weight:700}
 
-  /* ATTRAZIONI */
-  .poi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px;padding:20px}
-  .poi-card{background:#fff;border-radius:10px;border:1px solid #e8edf2;padding:16px;
-            box-shadow:0 1px 6px rgba(0,0,0,.06)}
-  .poi-card .poi-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
-  .poi-card h3{font-size:.95rem;font-weight:700;color:var(--navy);flex:1}
-  .poi-card .poi-loc{font-size:.75rem;color:#888;margin-bottom:8px}
-  .poi-card .poi-prices{display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap}
-  .price-tag{background:var(--sky);color:var(--navy);border-radius:6px;
-             padding:3px 10px;font-size:.78rem;font-weight:700}
-  .price-tag.free{background:var(--mint);color:var(--green)}
-  .poi-book{font-size:.78rem;font-weight:700;padding:3px 10px;border-radius:6px}
-  .book-yes{background:#FDEDEC;color:var(--red)}
-  .book-rec{background:#FEF5E7;color:#A04000}
-  .book-no{background:var(--mint);color:var(--green)}
-  .poi-card .orari{font-size:.77rem;color:#666;margin-top:4px}
-  .tappa-filter{display:flex;flex-wrap:wrap;gap:8px;padding:16px 20px 0;border-bottom:1px solid #eee;margin-bottom:0}
-  .filter-btn{padding:5px 14px;border-radius:16px;border:1.5px solid #ccc;
-              background:#fff;font-size:.8rem;font-weight:600;cursor:pointer;transition:all .2s}
-  .filter-btn:hover,.filter-btn.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+/* PRANZO AL SACCO BOX */
+.lunch-box{background:linear-gradient(90deg,#E8F5E9,#F1F8E9);border-radius:10px;
+  padding:14px 16px;margin:0 16px 16px;border-left:4px solid var(--green)}
+.lunch-box h3{font-size:.9rem;font-weight:800;color:var(--green);margin-bottom:8px}
+.lunch-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px}
+.lunch-item{font-size:.8rem;color:#1B5E20;display:flex;align-items:flex-start;gap:5px}
 
-  /* RISTORANTI */
-  .rest-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;padding:20px}
-  .rest-card{background:#fff;border-radius:10px;padding:16px;
-             border-top:4px solid var(--orange);box-shadow:var(--shadow)}
-  .rest-card h3{font-size:.93rem;font-weight:700;color:#1a1a2e;margin-bottom:4px}
-  .rest-card .cuisine{font-size:.78rem;color:var(--orange);font-weight:600;margin-bottom:6px}
-  .rest-card .addr{font-size:.76rem;color:#777;margin-bottom:8px}
-  .rest-card .desc{font-size:.8rem;color:#444;line-height:1.5}
-  .rest-card .r-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
-  .rest-card .r-price{font-weight:700;color:var(--green);font-size:.9rem}
-  .rest-card .r-family{font-size:.78rem;background:var(--mint);color:var(--green);
-                       border-radius:10px;padding:2px 8px;font-weight:600}
-  .tappa-tag{font-size:.7rem;background:var(--navy);color:#fff;
-             border-radius:8px;padding:2px 8px;font-weight:700;margin-bottom:8px;display:inline-block}
+/* ATTRAZIONI */
+.filter-wrap{display:flex;flex-wrap:wrap;gap:7px;padding:14px 16px 0;border-bottom:1px solid #eee}
+.filter-btn{padding:4px 12px;border-radius:14px;border:1.5px solid #ccc;
+  background:#fff;font-size:.78rem;font-weight:600;cursor:pointer;transition:all .2s}
+.filter-btn:hover,.filter-btn.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.poi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;padding:16px}
+.poi-card{background:#fff;border-radius:10px;border:1px solid #e8edf2;
+  padding:14px;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.poi-card h3{font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:3px}
+.poi-card .poi-loc{font-size:.73rem;color:#888;margin-bottom:7px}
+.poi-prices{display:flex;gap:7px;margin-bottom:7px;flex-wrap:wrap}
+.price-tag{background:var(--sky);color:var(--navy);border-radius:5px;
+  padding:2px 8px;font-size:.75rem;font-weight:700}
+.price-tag.free{background:var(--mint);color:var(--green)}
+.poi-book{font-size:.75rem;font-weight:700;padding:2px 8px;border-radius:5px}
+.bk-yes{background:#FDEDEC;color:var(--red)}
+.bk-rec{background:#FEF5E7;color:#A04000}
+.bk-no{background:var(--mint);color:var(--green)}
+.poi-tag{font-size:.68rem;background:#eee;border-radius:5px;padding:1px 6px;
+  font-weight:700;margin-bottom:5px;display:inline-block}
 
-  /* CHECKLIST */
-  .checklist{padding:20px;display:flex;flex-direction:column;gap:10px}
-  .check-item{background:#fff;border-radius:10px;padding:14px 18px;
-              border-left:5px solid;display:grid;
-              grid-template-columns:auto 1fr auto;gap:14px;align-items:center;
-              box-shadow:0 1px 6px rgba(0,0,0,.06);transition:opacity .2s}
-  .check-item.done{opacity:.55}
-  .check-item input[type=checkbox]{width:20px;height:20px;cursor:pointer;accent-color:var(--green)}
-  .check-item .ci-content h4{font-size:.92rem;font-weight:700;color:#1a1a2e;margin-bottom:3px}
-  .check-item .ci-content p{font-size:.8rem;color:#555;line-height:1.4}
-  .check-item .ci-cost{font-weight:800;font-size:.9rem;white-space:nowrap;text-align:right}
-  .ci-link{display:inline-block;margin-top:5px;font-size:.76rem;color:var(--blue);
-           font-weight:600;text-decoration:none}
-  .ci-link:hover{text-decoration:underline}
-  .check-item.p-red{border-color:var(--red)}
-  .check-item.p-orange{border-color:var(--orange)}
-  .check-item.p-yellow{border-color:#E2B007}
-  .check-item.p-green{border-color:var(--green)}
-  .check-progress{background:var(--gray);border-radius:10px;padding:16px 20px;
-                  margin:0 20px 8px;display:flex;align-items:center;gap:14px}
-  .progress-bar{flex:1;height:10px;background:#ddd;border-radius:5px;overflow:hidden}
-  .progress-fill{height:100%;background:linear-gradient(90deg,var(--green),#2E9E57);
-                 border-radius:5px;transition:width .4s}
-  .progress-label{font-size:.85rem;font-weight:700;color:var(--navy);white-space:nowrap}
+/* RISTORANTI */
+.rest-note{background:#FFF3E0;border-left:4px solid var(--orange);border-radius:0 8px 8px 0;
+  padding:10px 14px;margin:14px 16px 0;font-size:.82rem;color:#BF360C}
+.rest-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px;padding:16px}
+.rest-card{background:#fff;border-radius:10px;padding:14px;
+  border-top:4px solid var(--orange);box-shadow:var(--shadow)}
+.rest-card h3{font-size:.9rem;font-weight:700;color:#1a1a2e;margin-bottom:3px}
+.rest-card .cuisine{font-size:.75rem;color:var(--orange);font-weight:600;margin-bottom:5px}
+.rest-card .addr{font-size:.73rem;color:#777;margin-bottom:7px}
+.rest-card .desc{font-size:.78rem;color:#444;line-height:1.45}
+.rest-card .r-bottom{display:flex;justify-content:space-between;align-items:center;
+  margin-top:9px;flex-wrap:wrap;gap:5px}
+.r-price{font-weight:700;color:var(--green);font-size:.88rem}
+.r-book{font-size:.73rem;font-weight:700;padding:2px 8px;border-radius:8px}
+.rb-yes{background:#FDEDEC;color:var(--red)}
+.rb-no{background:var(--mint);color:var(--green)}
+.sera-tag{font-size:.68rem;background:var(--navy);color:#fff;
+  border-radius:6px;padding:2px 7px;font-weight:700;margin-bottom:7px;display:inline-block}
 
-  /* CONSIGLI */
-  .tips-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;padding:20px}
-  .tip-section{background:#fff;border-radius:10px;overflow:hidden;box-shadow:var(--shadow)}
-  .tip-head{padding:12px 16px;font-weight:700;font-size:.95rem;color:#fff}
-  .tip-list{padding:12px 0}
-  .tip-row{padding:10px 16px;border-bottom:1px solid #f4f4f4;display:grid;
-           grid-template-columns:120px 1fr;gap:10px;font-size:.82rem}
-  .tip-row:last-child{border-bottom:none}
-  .tip-row .tip-key{font-weight:700;color:var(--navy)}
-  .tip-row .tip-val{color:#444;line-height:1.5}
+/* CHECKLIST */
+.check-progress{background:#f7f9fc;border-radius:10px;padding:14px 18px;
+  margin:14px 16px 6px;display:flex;align-items:center;gap:12px}
+.progress-bar{flex:1;height:9px;background:#ddd;border-radius:5px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--green),#2E9E57);
+  border-radius:5px;transition:width .4s}
+.progress-label{font-size:.82rem;font-weight:700;color:var(--navy);white-space:nowrap}
+.checklist{padding:10px 16px 16px;display:flex;flex-direction:column;gap:9px}
+.check-item{background:#fff;border-radius:9px;padding:12px 16px;border-left:5px solid;
+  display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;
+  box-shadow:0 1px 4px rgba(0,0,0,.05);transition:opacity .2s}
+.check-item.done{opacity:.5}
+.check-item input[type=checkbox]{width:18px;height:18px;cursor:pointer;accent-color:var(--green)}
+.ci-content h4{font-size:.88rem;font-weight:700;color:#1a1a2e;margin-bottom:2px}
+.ci-content p{font-size:.78rem;color:#555;line-height:1.35}
+.ci-link{display:inline-block;margin-top:4px;font-size:.73rem;color:var(--blue);
+  font-weight:600;text-decoration:none}
+.ci-link:hover{text-decoration:underline}
+.ci-cost{font-weight:800;font-size:.85rem;white-space:nowrap;text-align:right;color:var(--green)}
+.ci-r{background:#FDEDEC;border-color:var(--red)}
+.ci-o{background:#FEF5E7;border-color:var(--orange)}
+.ci-y{background:#FEFCE8;border-color:#E2B007}
+.ci-g{background:#F0FFF4;border-color:var(--green)}
+.ci-w{background:#FFFBF0;border-color:var(--whisky)}
 
-  /* METEO BOX */
-  .meteo-strip{display:flex;flex-wrap:wrap;gap:12px;padding:20px 20px 4px}
-  .meteo-card{flex:1;min-width:140px;background:#fff;border-radius:10px;
-              padding:14px;text-align:center;box-shadow:var(--shadow)}
-  .meteo-card .m-icon{font-size:2rem;margin-bottom:6px}
-  .meteo-card .m-label{font-size:.75rem;color:#888;margin-bottom:4px}
-  .meteo-card .m-val{font-size:1rem;font-weight:800;color:var(--navy)}
+/* CONSIGLI */
+.tips-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px;padding:16px}
+.tip-sec{background:#fff;border-radius:10px;overflow:hidden;box-shadow:var(--shadow)}
+.tip-head{padding:11px 14px;font-weight:700;font-size:.92rem;color:#fff}
+.tip-row{padding:9px 14px;border-bottom:1px solid #f4f4f4;display:grid;
+  grid-template-columns:110px 1fr;gap:8px;font-size:.79rem}
+.tip-row:last-child{border-bottom:none}
+.tip-key{font-weight:700;color:var(--navy)}
+.tip-val{color:#444;line-height:1.45}
 
-  /* FOOTER */
-  footer{background:var(--navy);color:rgba(255,255,255,.7);text-align:center;
-         padding:20px;font-size:.8rem;margin-top:40px}
-  footer strong{color:#fff}
+/* METEO */
+.meteo-strip{display:flex;flex-wrap:wrap;gap:10px;padding:16px 16px 0}
+.meteo-card{flex:1;min-width:120px;background:#fff;border-radius:9px;padding:12px;
+  text-align:center;box-shadow:var(--shadow)}
+.m-icon{font-size:1.8rem;margin-bottom:4px}
+.m-label{font-size:.72rem;color:#888;margin-bottom:3px}
+.m-val{font-size:.92rem;font-weight:800;color:var(--navy)}
 
-  /* RESPONSIVE */
-  @media(max-width:600px){
-    .main{padding:16px 10px 40px}
-    .tl-item{grid-template-columns:70px 1fr;gap:8px}
-    .hotel-grid,.poi-grid,.rest-grid,.route-wrap,.tips-grid{grid-template-columns:1fr}
-    .total-box{flex-direction:column;gap:4px;text-align:center}
-    .check-item{grid-template-columns:auto 1fr}
-    .ci-cost{display:none}
-  }
+/* FOOTER */
+footer{background:var(--navy);color:rgba(255,255,255,.7);text-align:center;
+  padding:18px;font-size:.78rem}
+footer strong{color:#fff}
 
-  /* PRINT */
-  @media print{
-    .tabs-wrap{position:relative}
-    .section{display:block!important}
-    .day-body,.card-body{display:block!important}
-  }
-  
-  .scroll-top{position:fixed;bottom:24px;right:24px;width:42px;height:42px;
-              background:var(--blue);color:#fff;border:none;border-radius:50%;
-              font-size:1.2rem;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.25);
-              display:none;align-items:center;justify-content:center;z-index:999}
-  .scroll-top.show{display:flex}
+.scroll-top{position:fixed;bottom:22px;right:22px;width:40px;height:40px;
+  background:var(--blue);color:#fff;border:none;border-radius:50%;
+  font-size:1.1rem;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.25);
+  display:none;align-items:center;justify-content:center;z-index:999}
+.scroll-top.show{display:flex}
+
+@media(max-width:600px){
+  .main{padding:12px 8px 40px}
+  .tl-item{grid-template-columns:65px 1fr;gap:8px}
+  .hotel-grid,.poi-grid,.rest-grid,.route-wrap,.tips-grid,.distill-grid{grid-template-columns:1fr}
+  .volo-grid{grid-template-columns:1fr}
+  .total-box{flex-direction:column;gap:4px;text-align:center}
+  .check-item{grid-template-columns:auto 1fr}
+  .ci-cost{display:none}
+  .lunch-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
 
-<!-- HERO -->
 <div class="hero">
-  <h1>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Roadtrip in Scozia</h1>
-  <p class="sub">1 – 8 Aprile 2025 &bull; Van a noleggio &bull; 4 adulti + 3 bambini</p>
+  <h1>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Roadtrip in Scozia – Aprile 2025</h1>
+  <p class="sub">4 adulti + 3 bambini &bull; Van a noleggio &bull; 🥪 Pranzi al sacco &bull; 🥃 Whisky Trail</p>
   <div class="chips">
-    <span class="chip">✈️ Edinburgh</span>
+    <span class="chip">✈️ Milano → Edinburgh</span>
     <span class="chip">🏰 Stonehaven</span>
     <span class="chip">🦕 Inverness & Loch Ness</span>
+    <span class="chip">🥃 Speyside Trail</span>
     <span class="chip">🏔️ Isle of Skye</span>
     <span class="chip">🌲 Pitlochry</span>
     <span class="chip">🏙️ Edinburgh</span>
   </div>
+  <div class="flight-strip">
+    <div class="fl-item"><span>✈️ Andata</span><strong>Milano 12:00 → Edinburgh 13:40</strong></div>
+    <div class="fl-item"><span>|</span></div>
+    <div class="fl-item"><span>✈️ Ritorno</span><strong>Edinburgh 14:10 → Milano 17:35</strong></div>
+  </div>
 </div>
 
-<!-- NAV -->
 <div class="tabs-wrap">
-  <div class="tabs" id="tabBar">
+  <div class="tabs">
     <div class="tab active" onclick="switchTab('panoramica',this)">🗺️ Panoramica</div>
     <div class="tab" onclick="switchTab('itinerario',this)">📅 Itinerario</div>
+    <div class="tab" onclick="switchTab('distillerie',this)">🥃 Distillerie</div>
     <div class="tab" onclick="switchTab('attrazioni',this)">🏰 Attrazioni</div>
     <div class="tab" onclick="switchTab('ristoranti',this)">🍽️ Ristoranti</div>
     <div class="tab" onclick="switchTab('checklist',this)">✅ Da Prenotare</div>
@@ -253,59 +289,71 @@
 
 <!-- ═══ PANORAMICA ═══ -->
 <div id="panoramica" class="section active">
+
   <div class="card">
-    <div class="sec-head">
-      <h2>🏨 Hotel Prenotati</h2>
-      <p>5 strutture – 7 notti totali</p>
+    <div class="sec-head"><h2>✈️ Voli</h2></div>
+    <div class="volo-grid">
+      <div class="volo-card" style="background:#EBF5FB;border:1px solid #AED6F1">
+        <div class="volo-icon">🛫</div>
+        <div class="volo-info">
+          <h3>ANDATA – Martedì 1 Aprile</h3>
+          <div class="volo-row"><span class="vt">Partenza:</span><strong>Milano – 12:00</strong></div>
+          <div class="volo-row"><span class="vt">Arrivo:</span><strong>Edinburgh – 13:40</strong></div>
+          <div class="volo-row"><span class="vt">Durata:</span><span>~2h 40m</span></div>
+          <div class="volo-row"><span class="vt">Poi:</span><span>Ritiro van + spesa provviste al sacco</span></div>
+        </div>
+      </div>
+      <div class="volo-card" style="background:#EBF5FB;border:1px solid #AED6F1">
+        <div class="volo-icon">🛬</div>
+        <div class="volo-info">
+          <h3>RITORNO – Martedì 8 Aprile</h3>
+          <div class="volo-row"><span class="vt">Partenza:</span><strong>Edinburgh – 14:10</strong></div>
+          <div class="volo-row"><span class="vt">Arrivo:</span><strong>Milano – 17:35</strong></div>
+          <div class="volo-row"><span class="vt">Durata:</span><span>~2h 25m</span></div>
+          <div class="volo-row"><span class="vt">Attenzione:</span><span>Essere in aeroporto entro le <strong>12:30</strong>. Riconsegnare van prima!</span></div>
+        </div>
+      </div>
     </div>
+    <div class="volo-tip">
+      💡 <strong>Giorno 1:</strong> Dopo il ritiro del van, fare la spesa al <strong>M&S Simply Food</strong> o <strong>Tesco</strong> dell'aeroporto per le provviste del pranzo al sacco del pomeriggio. Poi ripartire verso nord!
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="sec-head"><h2>🏨 Hotel Prenotati</h2><p>5 strutture – 7 notti – ✅ = colazione inclusa</p></div>
     <div class="hotel-grid">
       <div class="hotel-card">
+        <span class="colaz-badge colaz-yes">✅ Colaz. inclusa</span>
         <h3>🏠 Belvedere Guest House</h3>
-        <div class="meta">
-          <span>📍 Stonehaven, Aberdeenshire</span>
-          <span>🗓️ Martedì 1 → Mercoledì 2 Aprile</span>
-          <span>🍳 Colazione inclusa</span>
-        </div>
+        <div class="meta"><span>📍 Stonehaven, Aberdeenshire</span><span>🗓️ Mar 1 → Mer 2 Apr</span></div>
         <div class="price">£362</div>
         <a href="https://www.booking.com/hotel/gb/belvedere-stonehaven.html" target="_blank">🔗 Booking.com</a>
       </div>
       <div class="hotel-card">
+        <span class="colaz-badge colaz-no">❌ Colaz. non incl.</span>
         <h3>🏨 Kingsmills Hotel</h3>
-        <div class="meta">
-          <span>📍 Inverness</span>
-          <span>🗓️ Mercoledì 2 → Giovedì 3 Aprile</span>
-          <span>⭐ Hotel 4 stelle con piscina</span>
-        </div>
+        <div class="meta"><span>📍 Inverness</span><span>🗓️ Mer 2 → Gio 3 Apr</span></div>
         <div class="price">£361</div>
         <a href="https://www.booking.com/hotel/gb/kingsmills-inverness.html" target="_blank">🔗 Booking.com</a>
       </div>
       <div class="hotel-card">
+        <span class="colaz-badge colaz-no">❌ Colaz. non incl.</span>
         <h3>🌄 Blairmore House</h3>
-        <div class="meta">
-          <span>📍 Isola di Skye</span>
-          <span>🗓️ Giovedì 3 → Sabato 5 Aprile</span>
-          <span>🌙 2 notti</span>
-        </div>
+        <div class="meta"><span>📍 Isle of Skye</span><span>🗓️ Gio 3 → Sab 5 Apr (2 notti)</span></div>
         <div class="price">£796</div>
         <a href="https://www.booking.com/Share-DRLmrkK" target="_blank">🔗 Booking.com</a>
       </div>
       <div class="hotel-card">
+        <span class="colaz-badge colaz-yes">✅ Colaz. inclusa</span>
         <h3>🏡 Westlands of Pitlochry</h3>
-        <div class="meta">
-          <span>📍 Pitlochry, Perthshire</span>
-          <span>🗓️ Sabato 5 → Domenica 6 Aprile</span>
-          <span>🍳 Colazione inclusa</span>
-        </div>
+        <div class="meta"><span>📍 Pitlochry</span><span>🗓️ Sab 5 → Dom 6 Apr</span></div>
         <div class="price">£318</div>
         <a href="https://www.booking.com/Share-CDpiF4" target="_blank">🔗 Booking.com</a>
       </div>
       <div class="hotel-card">
+        <span class="colaz-badge colaz-no">❌ Colaz. non incl.</span>
         <h3>🏙️ Frederick House Hotel</h3>
-        <div class="meta">
-          <span>📍 Edinburgh, centro storico</span>
-          <span>🗓️ Domenica 6 → Martedì 8 Aprile</span>
-          <span>🌙 2 notti – 42 Frederick St</span>
-        </div>
+        <div class="meta"><span>📍 Edinburgh, centro</span><span>🗓️ Dom 6 → Mar 8 Apr (2 notti)</span></div>
         <div class="price">£615</div>
         <a href="https://www.booking.com/hotel/gb/frederick-house-hotel.html" target="_blank">🔗 Booking.com</a>
       </div>
@@ -317,693 +365,755 @@
   </div>
 
   <div class="card">
-    <div class="sec-head">
-      <h2>🚐 Riepilogo Percorso</h2>
-      <p>~870 km totali in 8 giorni</p>
-    </div>
-    <div class="route-wrap">
-      <div class="route-card" style="background:linear-gradient(135deg,#1A3A5C,#2E6DA4)">
-        <span class="km">~170 km</span>
-        <h3>Giorno 1 – Mar 1 Apr</h3>
-        <div class="loc">✈️ Edinburgh → Stonehaven</div>
-        <div class="details">Via A90 Nord &bull; ~2h 20m<br>Sosta: Dundee, Discovery Point</div>
-      </div>
-      <div class="route-card" style="background:linear-gradient(135deg,#1F4E79,#2980B9)">
-        <span class="km">~175 km</span>
-        <h3>Giorno 2 – Mer 2 Apr</h3>
-        <div class="loc">Stonehaven → Inverness</div>
-        <div class="details">Via A90 / A96 &bull; ~2h 30m<br>Sosta: RSPB Fowlsheugh, Elgin</div>
-      </div>
-      <div class="route-card" style="background:linear-gradient(135deg,#0D47A1,#1976D2)">
-        <span class="km">~175 km</span>
-        <h3>Giorno 3 – Gio 3 Apr</h3>
-        <div class="loc">Inverness → Skye</div>
-        <div class="details">Via A82/A87 Scenic &bull; ~2h 45m<br>Sosta: Urquhart Castle, Eilean Donan</div>
-      </div>
-      <div class="route-card" style="background:linear-gradient(135deg,#2E7D32,#43A047)">
-        <span class="km">~80 km</span>
-        <h3>Giorno 4 – Ven 4 Apr</h3>
-        <div class="loc">🏝️ Giornata su Skye</div>
-        <div class="details">Giro isola flessibile<br>Old Man of Storr, Fairy Pools, Dinosauri</div>
-      </div>
-      <div class="route-card" style="background:linear-gradient(135deg,#4A148C,#7B1FA2)">
-        <span class="km">~215 km</span>
-        <h3>Giorno 5 – Sab 5 Apr</h3>
-        <div class="loc">Skye → Pitlochry</div>
-        <div class="details">Via A87 / A9 &bull; ~3h 30m<br>Sosta: Sligachan, Fort William</div>
-      </div>
-      <div class="route-card" style="background:linear-gradient(135deg,#B71C1C,#E53935)">
-        <span class="km">~110 km</span>
-        <h3>Giorno 6 – Dom 6 Apr</h3>
-        <div class="loc">Pitlochry → Edinburgh</div>
-        <div class="details">Via A9 &bull; ~1h 30m<br>Sosta: Blair Castle, Dunkeld, Stirling</div>
-      </div>
-      <div class="route-card" style="background:linear-gradient(135deg,#E65100,#F57C00)">
-        <span class="km">a piedi</span>
-        <h3>Giorno 7 – Lun 7 Apr</h3>
-        <div class="loc">🏙️ Edinburgh (giornata)</div>
-        <div class="details">Edinburgh Castle, Camera Obscura<br>Royal Mile, Arthur's Seat</div>
-      </div>
-      <div class="route-card" style="background:linear-gradient(135deg,#37474F,#546E7A)">
-        <span class="km">~13 km</span>
-        <h3>Giorno 8 – Mar 8 Apr</h3>
-        <div class="loc">Edinburgh → ✈️ Aeroporto</div>
-        <div class="details">Mattina: National Museum (gratis)<br>Poi partenza</div>
+    <div class="sec-head"><h2>🥪 Strategia Pranzi al Sacco</h2></div>
+    <div class="lunch-box" style="margin:16px">
+      <h3>🥪 Perché i pranzi al sacco? Guadagni 1-2 ore di visita ogni giorno!</h3>
+      <div class="lunch-grid">
+        <div class="lunch-item">🧺 <span><strong>Preparare la sera prima:</strong> sandwich, frutta, barrette, thermos tè/caffè</span></div>
+        <div class="lunch-item">🛒 <span><strong>Supermarket utili:</strong> M&S Food, Tesco, Lidl (ottimi lungo l'A9)</span></div>
+        <div class="lunch-item">🏔️ <span><strong>Mangiare in posto panoramico:</strong> Fairy Glen, Hermitage, Loch Ness shore, Holyrood Park</span></div>
+        <div class="lunch-item">🌡️ <span><strong>Portare:</strong> borsa termica, sacchetti gelo, tovaglietta impermeabile</span></div>
+        <div class="lunch-item">☕ <span><strong>Thermos:</strong> essenziale! In Scozia il freddo si sente anche ad aprile</span></div>
+        <div class="lunch-item">🍎 <span><strong>Snack bambini:</strong> mela, yogurt, crackers, frutta secca, cioccolato</span></div>
       </div>
     </div>
   </div>
 
-  <!-- Meteo -->
-  <div class="card" style="margin-top:18px">
-    <div class="sec-head"><h2>☁️ Meteo Aprile in Scozia</h2></div>
-    <div class="meteo-strip">
-      <div class="meteo-card"><div class="m-icon">🌡️</div><div class="m-label">Temperatura</div><div class="m-val">3 – 11°C</div></div>
-      <div class="meteo-card"><div class="m-icon">🌧️</div><div class="m-label">Giorni pioggia</div><div class="m-val">~14/30</div></div>
-      <div class="meteo-card"><div class="m-icon">☀️</div><div class="m-label">Ore luce</div><div class="m-val">13 – 15 h</div></div>
-      <div class="meteo-card"><div class="m-icon">🌬️</div><div class="m-label">Vento</div><div class="m-val">Frequente</div></div>
-      <div class="meteo-card"><div class="m-icon">🦟</div><div class="m-label">Midge</div><div class="m-val">Basso rischio</div></div>
+  <div class="card">
+    <div class="sec-head"><h2>🚐 Percorso – 8 Giorni</h2><p>~870 km totali</p></div>
+    <div class="route-wrap">
+      <div class="route-card" style="background:linear-gradient(135deg,#1A3A5C,#1A3A5CCC)">
+        <span class="km-badge">~170 km</span>
+        <h3>1A3A5C G1 – Mar 1 Apr</h3>
+        <div class="loc">✈️ Milano → Edinburgh → Stonehaven</div>
+        <div class="details">A90 Nord &bull; ~170 km &bull; ~2h 20m<br>Stop: Dundee Discovery Point, Dunnottar Castle</div></div>
+      <div class="route-card" style="background:linear-gradient(135deg,#1F4E79,#1F4E79CC)">
+        <span class="km-badge">~175 km</span>
+        <h3>1F4E79 G2 – Mer 2 Apr</h3>
+        <div class="loc">Stonehaven → 🥃 Speyside → Inverness</div>
+        <div class="details">A96 via Speyside &bull; ~175 km &bull; ~2h 30m<br>🥃 Strathisla + Benromach + Glen Grant</div><span class="whisky-stops">🥃 🥃 Speyside Whisky Trail!</span></div>
+      <div class="route-card" style="background:linear-gradient(135deg,#0D47A1,#0D47A1CC)">
+        <span class="km-badge">~175 km</span>
+        <h3>0D47A1 G3 – Gio 3 Apr</h3>
+        <div class="loc">Inverness → Loch Ness → Eilean Donan → Skye</div>
+        <div class="details">A82/A87 Scenic &bull; ~175 km &bull; ~2h 45m<br>Urquhart Castle, Eilean Donan Castle</div></div>
+      <div class="route-card" style="background:linear-gradient(135deg,#2E7D32,#2E7D32CC)">
+        <span class="km-badge">~80 km</span>
+        <h3>2E7D32 G4 – Ven 4 Apr</h3>
+        <div class="loc">🏝️ Giornata su Skye</div>
+        <div class="details">Giro isola &bull; ~80 km<br>Old Man of Storr, 🥃 Talisker, Fairy Pools</div><span class="whisky-stops">🥃 🥃 Talisker Distillery!</span></div>
+      <div class="route-card" style="background:linear-gradient(135deg,#4A148C,#4A148CCC)">
+        <span class="km-badge">~215 km</span>
+        <h3>4A148C G5 – Sab 5 Apr</h3>
+        <div class="loc">Skye → 🥃 Dalwhinnie → Pitlochry</div>
+        <div class="details">A87/A9 &bull; ~215 km &bull; ~3h 30m<br>🥃 Dalwhinnie (A9), Edradour Pitlochry</div><span class="whisky-stops">🥃 🥃 Dalwhinnie + Edradour</span></div>
+      <div class="route-card" style="background:linear-gradient(135deg,#B71C1C,#B71C1CCC)">
+        <span class="km-badge">~110 km</span>
+        <h3>B71C1C G6 – Dom 6 Apr</h3>
+        <div class="loc">Pitlochry → 🥃 Deanston → Edinburgh</div>
+        <div class="details">A9 &bull; ~110 km &bull; ~1h 30m<br>Blair Castle, Hermitage, 🥃 Deanston</div><span class="whisky-stops">🥃 🥃 Deanston (Stirling)</span></div>
+      <div class="route-card" style="background:linear-gradient(135deg,#E65100,#E65100CC)">
+        <span class="km-badge">a piedi</span>
+        <h3>E65100 G7 – Lun 7 Apr</h3>
+        <div class="loc">🏙️ Giornata a Edinburgh</div>
+        <div class="details">A piedi &bull; centro storico<br>Edinburgh Castle, 🥃 Scotch Whisky Exp.</div><span class="whisky-stops">🥃 🥃 Scotch Whisky Experience</span></div>
+      <div class="route-card" style="background:linear-gradient(135deg,#37474F,#37474FCC)">
+        <span class="km-badge">~13 km</span>
+        <h3>37474F G8 – Mar 8 Apr</h3>
+        <div class="loc">Edinburgh → ✈️ Milano 14:10</div>
+        <div class="details">A8/M8 &bull; ~13 km &bull; ~25 min<br>National Museum, poi aeroporto (≤12:30!)</div></div>
     </div>
-    <p style="padding:10px 20px 16px;font-size:.82rem;color:#666">
-      👕 <strong>Vestirsi a cipolla!</strong> Portare impermeabili per tutti, scarpe waterproof, guanti e cappelli per mattino/sera. Stivali di gomma per i bambini (adoreranno le pozzanghere!).
-    </p>
+  </div>
+
+  <div class="card">
+    <div class="sec-head"><h2>☁️ Meteo Aprile</h2></div>
+    <div class="meteo-strip">
+      <div class="meteo-card"><div class="m-icon">🌡️</div><div class="m-label">Temperatura</div><div class="m-val">3–11°C</div></div>
+      <div class="meteo-card"><div class="m-icon">🌧️</div><div class="m-label">Giorni pioggia</div><div class="m-val">~14/30</div></div>
+      <div class="meteo-card"><div class="m-icon">☀️</div><div class="m-label">Ore luce</div><div class="m-val">13–15h</div></div>
+      <div class="meteo-card"><div class="m-icon">🌅</div><div class="m-label">Tramonto</div><div class="m-val">~20:30</div></div>
+      <div class="meteo-card"><div class="m-icon">🦟</div><div class="m-label">Midge</div><div class="m-val">Basso</div></div>
+    </div>
+    <p style="padding:10px 16px 14px;font-size:.8rem;color:#666">👕 Vestirsi a <strong>cipolla</strong>! Impermeabili per tutti, stivali gomma bambini, thermos con bevanda calda. Il vento è frequente!</p>
   </div>
 </div>
 
 <!-- ═══ ITINERARIO ═══ -->
 <div id="itinerario" class="section">
-  <div class="card" style="margin-bottom:0;border-radius:var(--radius) var(--radius) 0 0">
-    <div class="sec-head"><h2>📅 Itinerario Giornaliero Dettagliato</h2><p>Clicca su ogni giorno per espandere</p></div>
+  <div class="card" style="margin-bottom:0;border-radius:var(--r) var(--r) 0 0">
+    <div class="sec-head">
+      <h2>📅 Itinerario Giornaliero</h2>
+      <p>🥃 Righe dorate = distillerie &nbsp;&bull;&nbsp; 🥪 Righe verdi = pranzo al sacco</p>
+    </div>
   </div>
-
   <div class="day-card">
     <div class="day-head" style="background:#1A3A5C" onclick="toggleDay(this)">
-      <span class="day-badge">Giorno 1<br>Martedì 1 Aprile</span>
-      <span class="day-title">Edinburgh Airport → Stonehaven</span>
-      <span style="font-size:.78rem;background:rgba(255,255,255,.2);border-radius:10px;padding:2px 8px;margin-right:8px">~170 km &bull; ~2h 20m</span>
-      <span class="day-arrow">▼</span>
+      <div class="day-badge">G1<br>Martedì 1 Aprile</div>
+      <div class="day-title">✈️ Milano 12:00 → Edinburgh 13:40 → Stonehaven</div>
+      <div style="font-size:.74rem;background:rgba(255,255,255,.2);border-radius:8px;padding:2px 8px;margin-right:6px">~170 km</div>
+      <div class="day-arrow">▼</div>
     </div>
     <div class="day-body">
       <div class="timeline">
-        <div class="tl-item">
-          <div class="tl-time">Mattina</div>
+        <div class="tl-item ">
+          <div class="tl-time">12:00</div>
+          <div class="tl-content">
+            <h4>✈️ Partenza da Milano</h4>
+            <p>Decollo verso Edinburgh!</p>
+            <div class="meta-row"><span class="badge b-dur">2h 40m</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">13:40</div>
           <div class="tl-content">
             <h4>✈️ Arrivo Edinburgh Airport</h4>
-            <p>Ritiro van a noleggio, partenza verso nord lungo la A90</p>
-            <div class="meta-row"><span class="badge badge-dur">⚠️ Confermare orario atterraggio</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~10:30</div>
+            <p>Atterraggio, dogana, bagagli</p>
+            <div class="meta-row"><span class="badge b-dur">45 min</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~14:30</div>
+          <div class="tl-content">
+            <h4>🚐 Ritiro van</h4>
+            <p>Prendere il van all'aeroporto e caricare</p>
+            <div class="meta-row"><span class="badge b-dur">30 min</span><span class="badge b-cost">~£600-700 tot</span><span class="badge b-ok">Arnold Clark / Enterprise / Sixt</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~15:00</div>
+          <div class="tl-content">
+            <h4>🛒 Spesa provviste</h4>
+            <p>M&S Simply Food o Tesco aeroporto – provviste pranzo al sacco per oggi e prossimi giorni</p>
+            <div class="meta-row"><span class="badge b-dur">30 min</span><span class="badge b-cost">~£30-40 tot</span><span class="badge b-ok">Essenziale prima di partire!</span></div></div></div>
+        <div class="tl-item is-lunch">
+          <div class="tl-time">~15:30</div>
+          <div class="tl-content">
+            <h4>🥪 Pranzo al sacco in van</h4>
+            <p>Prima pausa pranzo al sacco mentre si guida verso nord</p>
+            <div class="meta-row"></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~17:00</div>
           <div class="tl-content">
             <h4>📍 Dundee – Discovery Point</h4>
-            <p>Nave antartica RRS Discovery + V&A Museum. Bambini adorano!</p>
-            <div class="meta-row"><span class="badge badge-dur">1h 30m &bull; £13/adulto, £8/bimbo</span><span class="badge badge-ok">V&A Dundee: ingresso gratuito</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~13:00</div>
-          <div class="tl-content">
-            <h4>🍽️ Pranzo a Dundee</h4>
-            <p>Centro di Dundee, belle opzioni</p>
-            <div class="meta-row"><span class="badge badge-dur">1h &bull; ~£15/pp</span><span class="badge badge-ok">The McManus / Broughty Ferry</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~16:00</div>
+            <p>RRS Discovery (nave antartica) + V&A Museum. Bambini adorano!</p>
+            <div class="meta-row"><span class="badge b-dur">45 min</span><span class="badge b-cost">£13/ad, £8/bimbo</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~18:30</div>
           <div class="tl-content">
             <h4>🏰 Dunnottar Castle</h4>
-            <p>Castello su scogliera a 160m – IMPERDIBILE per bambini! 500m a piedi dalla strada.</p>
-            <div class="meta-row"><span class="badge badge-dur">1h 30m &bull; £10.50 adulto, £4.50 bimbo</span><span class="badge badge-warn">⚠️ Prenotare online</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~18:00</div>
+            <p>Castello su scogliera a 160m – IMPERDIBILE! Luce dorata del pomeriggio.</p>
+            <div class="meta-row"><span class="badge b-dur">1h 30m</span><span class="badge b-cost">£10.50/ad, £4.50/bimbo</span><span class="badge b-warn">⚠️ Prenotare online</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~20:00</div>
           <div class="tl-content">
-            <h4>🏨 Check-in Belvedere Guest House</h4>
-            <p>Check-in, sistemazione bagagli</p>
-            <div class="meta-row"><span class="badge badge-ok">Colazione inclusa</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~19:30</div>
+            <h4>🏨 Check-in Belvedere GH</h4>
+            <p>Stonehaven. Colazione inclusa domani ✅</p>
+            <div class="meta-row"><span class="badge b-cost">£362</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~20:30</div>
           <div class="tl-content">
             <h4>🍽️ Cena: The Ship Inn</h4>
-            <p>Seafood sul porto. Cullen Skink da non perdere!</p>
-            <div class="meta-row"><span class="badge badge-dur">1h 30m &bull; ~£20/pp</span><span class="badge badge-ok">Harbour St AB39 2JY</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">Sera</div>
-          <div class="tl-content">
-            <h4>🌅 Stonehaven Harbour</h4>
-            <p>Passeggiata sul pittoresco porto</p>
-            <div class="meta-row"><span class="badge badge-dur">30 min &bull; Gratuito</span><span class="badge badge-ok">Bellissimo di sera</span>
-            </div>
-          </div>
-        </div>
+            <p>Cullen Skink + haddock fresco. Sul porto.</p>
+            <div class="meta-row"><span class="badge b-dur">1h 30m</span><span class="badge b-cost">~£20/pp</span><span class="badge b-ok">Harbour St AB39 2JY</span></div></div></div>
       </div>
     </div>
   </div>
   <div class="day-card">
     <div class="day-head" style="background:#1F4E79" onclick="toggleDay(this)">
-      <span class="day-badge">Giorno 2<br>Mercoledì 2 Aprile</span>
-      <span class="day-title">Stonehaven → Inverness</span>
-      <span style="font-size:.78rem;background:rgba(255,255,255,.2);border-radius:10px;padding:2px 8px;margin-right:8px">~175 km &bull; ~2h 30m</span>
-      <span class="day-arrow">▼</span>
+      <div class="day-badge">G2<br>Mercoledì 2 Aprile</div>
+      <div class="day-title">Stonehaven → 🥃 Speyside Whisky Trail → Inverness</div>
+      <div style="font-size:.74rem;background:rgba(255,255,255,.2);border-radius:8px;padding:2px 8px;margin-right:6px">~175 km</div>
+      <div class="day-arrow">▼</div>
     </div>
     <div class="day-body">
       <div class="timeline">
-        <div class="tl-item">
+        <div class="tl-item ">
           <div class="tl-time">Mattina</div>
           <div class="tl-content">
-            <h4>🍳 Colazione inclusa</h4>
-            <p>Colazione al Belvedere Guest House</p>
-            <div class="meta-row"><span class="badge badge-ok">Approfittarne!</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~09:30</div>
+            <h4>🍳 Colazione inclusa ✅</h4>
+            <p>Colaz. al Belvedere. Preparare borsa pranzo al sacco!</p>
+            <div class="meta-row"><span class="badge b-cost">Inclusa</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~09:00</div>
           <div class="tl-content">
-            <h4>📍 RSPB Fowlsheugh</h4>
-            <p>100.000 uccelli marini sulle scogliere ad aprile. PERFETTO per bambini!</p>
-            <div class="meta-row"><span class="badge badge-dur">1h 30m &bull; Gratuito</span><span class="badge badge-ok">3km a sud di Stonehaven</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~11:30</div>
+            <h4>🐦 RSPB Fowlsheugh</h4>
+            <p>100.000 uccelli marini sulle scogliere! Aprile = perfetto.</p>
+            <div class="meta-row"><span class="badge b-dur">1h 30m</span><span class="badge b-cost">Gratuito</span><span class="badge b-ok">3km a sud di Stonehaven</span></div></div></div>
+        <div class="tl-item is-whisky">
+          <div class="tl-time">~11:00</div>
           <div class="tl-content">
-            <h4>🚐 Drive verso Inverness</h4>
-            <p>Via A90/A96 &bull; 175km</p>
-            <div class="meta-row"><span class="badge badge-dur">~2h 30m</span><span class="badge badge-ok">Strada veloce</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~13:30</div>
+            <h4>🥃 Strathisla Distillery (Keith)</h4>
+            <p>La più antica del Speyside (1786)! Sulla A96. Architettura iconica.</p>
+            <div class="meta-row"><span class="badge b-dur">1h 30m</span><span class="badge b-cost">£15/ad</span></div></div></div>
+        <div class="tl-item is-lunch">
+          <div class="tl-time">~12:45</div>
           <div class="tl-content">
-            <h4>📍 Elgin – sosta pranzo</h4>
-            <p>Cattedrale medievale in rovina (gratis!) + pranzo in città</p>
-            <div class="meta-row"><span class="badge badge-dur">1h 30m &bull; ~£15/pp</span><span class="badge badge-ok">Elgin Cathedral: gratuito</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
+            <h4>🥪 Pranzo al sacco a Strathisla</h4>
+            <p>Picnic nei giardini della distilleria!</p>
+            <div class="meta-row"><span class="badge b-dur">45 min</span></div></div></div>
+        <div class="tl-item is-whisky">
+          <div class="tl-time">~14:00</div>
+          <div class="tl-content">
+            <h4>🥃 Benromach Distillery (Forres)</h4>
+            <p>Piccola e artigianale. Solo 2 dipendenti! Sulla A96.</p>
+            <div class="meta-row"><span class="badge b-dur">1h</span><span class="badge b-cost">£12/ad</span></div></div></div>
+        <div class="tl-item ">
           <div class="tl-time">~15:30</div>
           <div class="tl-content">
-            <h4>📍 Ness Islands Inverness</h4>
-            <p>Passerella su ponti vittoriani nel cuore di Inverness. Bellissimo!</p>
-            <div class="meta-row"><span class="badge badge-dur">45 min &bull; Gratuito</span><span class="badge badge-ok">Parcheggio vicino al castello</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
+            <h4>📍 Elgin Cathedral (sosta)</h4>
+            <p>Cattedrale medievale in rovina (gratis!) + caffè</p>
+            <div class="meta-row"><span class="badge b-dur">30 min</span><span class="badge b-cost">Gratuito</span></div></div></div>
+        <div class="tl-item ">
           <div class="tl-time">~16:30</div>
           <div class="tl-content">
+            <h4>📍 Ness Islands, Inverness</h4>
+            <p>Ponti vittoriani nel centro di Inverness. Bello con bambini!</p>
+            <div class="meta-row"><span class="badge b-dur">45 min</span><span class="badge b-cost">Gratuito</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~17:30</div>
+          <div class="tl-content">
             <h4>🏰 Inverness Castle Experience</h4>
-            <p>Castello interattivo appena riaperto! Vista sulle Highlands.</p>
-            <div class="meta-row"><span class="badge badge-dur">1h 30m &bull; ~£12 adulto, £6 bimbo</span><span class="badge badge-warn">⚠️ Prenotare consigliato</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~18:00</div>
+            <p>Castello interattivo appena riaperto!</p>
+            <div class="meta-row"><span class="badge b-dur">1h</span><span class="badge b-cost">~£12/ad, £6/b</span><span class="badge b-warn">⚠️ Prenotare</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~18:30</div>
           <div class="tl-content">
             <h4>🏨 Check-in Kingsmills Hotel</h4>
-            <p>Hotel 4 stelle con piscina – i bambini adoreranno!</p>
-            <div class="meta-row"><span class="badge badge-ok">Scorraig Drive IV2 3JP</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~19:30</div>
+            <p>4★ con piscina. Colaz. NON inclusa ❌</p>
+            <div class="meta-row"><span class="badge b-cost">£361</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~20:00</div>
           <div class="tl-content">
             <h4>🍽️ Cena: The Highlander</h4>
-            <p>Musica tradizionale scozzese live. Haggis, steak pie, fish & chips.</p>
-            <div class="meta-row"><span class="badge badge-dur">2h &bull; ~£18/pp</span><span class="badge badge-ok">17 Church St IV1 1DA</span>
-            </div>
-          </div>
-        </div>
+            <p>Musica tradizionale live! Haggis, steak pie.</p>
+            <div class="meta-row"><span class="badge b-dur">2h</span><span class="badge b-cost">~£18/pp</span><span class="badge b-ok">17 Church St IV1 1DA</span></div></div></div>
       </div>
     </div>
   </div>
   <div class="day-card">
     <div class="day-head" style="background:#0D47A1" onclick="toggleDay(this)">
-      <span class="day-badge">Giorno 3<br>Giovedì 3 Aprile</span>
-      <span class="day-title">Inverness → Loch Ness → Eilean Donan → Skye</span>
-      <span style="font-size:.78rem;background:rgba(255,255,255,.2);border-radius:10px;padding:2px 8px;margin-right:8px">~175 km &bull; ~2h 45m (con soste)</span>
-      <span class="day-arrow">▼</span>
+      <div class="day-badge">G3<br>Giovedì 3 Aprile</div>
+      <div class="day-title">Inverness → Loch Ness → Eilean Donan → Isle of Skye</div>
+      <div style="font-size:.74rem;background:rgba(255,255,255,.2);border-radius:8px;padding:2px 8px;margin-right:6px">~175 km</div>
+      <div class="day-arrow">▼</div>
     </div>
     <div class="day-body">
       <div class="timeline">
-        <div class="tl-item">
-          <div class="tl-time">~09:30</div>
+        <div class="tl-item ">
+          <div class="tl-time">Mattina</div>
           <div class="tl-content">
-            <h4>🚐 Partenza verso Loch Ness</h4>
-            <p>A82 lungo la riva ovest – panorami mozzafiato</p>
-            <div class="meta-row"><span class="badge badge-dur">~45 min drive</span><span class="badge badge-ok">Strada scenica bellissima</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~10:30</div>
+            <h4>☕ Colazione a pagamento</h4>
+            <p>Colaz. NON inclusa ❌. Caffetteria vicina all'hotel.</p>
+            <div class="meta-row"><span class="badge b-cost">~£10/pp</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~09:00</div>
+          <div class="tl-content">
+            <h4>🚐 Verso Loch Ness (A82)</h4>
+            <p>Strada panoramica lungo la riva del Loch</p>
+            <div class="meta-row"><span class="badge b-dur">~45 min drive</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~10:00</div>
           <div class="tl-content">
             <h4>🏰 Urquhart Castle + Loch Ness</h4>
-            <p>Castello storico sulle rive del Loch. Torre Grant, catapulta medievale, cerca Nessie!</p>
-            <div class="meta-row"><span class="badge badge-dur">1h 30m &bull; £14.50 adulto, £8.70 bimbo</span><span class="badge badge-warn">⚠️ PRENOTARE OBBLIGATORIO – timed entry</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~13:00</div>
+            <p>Torre Grant, catapulta medievale. Cerca Nessie!</p>
+            <div class="meta-row"><span class="badge b-dur">2h</span><span class="badge b-cost">£14.50/ad, £8.70/b</span><span class="badge b-warn">⚠️ OBBLIGATORIO prenotare</span></div></div></div>
+        <div class="tl-item is-lunch">
+          <div class="tl-time">~12:30</div>
           <div class="tl-content">
-            <h4>🍽️ Pranzo a Drumnadrochit</h4>
-            <p>The Loch Ness Inn o The Benleva Hotel</p>
-            <div class="meta-row"><span class="badge badge-dur">1h &bull; ~£15/pp</span><span class="badge badge-ok">Borgo sul Loch Ness</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~14:30</div>
+            <h4>🥪 Pranzo al sacco sul Loch Ness</h4>
+            <p>Picnic con vista sul lago! Area picnic vicino al Visitor Centre.</p>
+            <div class="meta-row"><span class="badge b-dur">45 min</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~14:00</div>
           <div class="tl-content">
             <h4>🏰 Eilean Donan Castle</h4>
-            <p>Il castello più fotografato di Scozia! Isolotto dove si incontrano 3 lochs.</p>
-            <div class="meta-row"><span class="badge badge-dur">1h 30m &bull; £12 adulto, £6.50 bimbo</span><span class="badge badge-ok">Dornie IV40 8DX</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~17:00</div>
+            <p>Il castello più fotografato di Scozia!</p>
+            <div class="meta-row"><span class="badge b-dur">1h 30m</span><span class="badge b-cost">£12/ad, £6.50/b</span><span class="badge b-ok">Dornie IV40 8DX</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~16:00</div>
           <div class="tl-content">
-            <h4>🌉 Skye Bridge</h4>
-            <p>Attraversamento gratuito del ponte verso Skye! Stop foto.</p>
-            <div class="meta-row"><span class="badge badge-dur">15 min &bull; Gratuito</span><span class="badge badge-ok">Nessun pedaggio</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~17:30</div>
+            <h4>🌉 Skye Bridge – foto stop</h4>
+            <p>Attraversamento gratuito!</p>
+            <div class="meta-row"><span class="badge b-dur">15 min</span><span class="badge b-cost">Gratuito</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~16:30</div>
           <div class="tl-content">
             <h4>📍 Portree Harbour</h4>
-            <p>Arrivo a Portree, passeggiata al colorato porto pittoresco</p>
-            <div class="meta-row"><span class="badge badge-dur">1h &bull; Gratuito</span><span class="badge badge-warn">Foto obbligatorie!</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~19:00</div>
+            <p>Porto colorato. Foto obbligatorie!</p>
+            <div class="meta-row"><span class="badge b-dur">1h</span><span class="badge b-cost">Gratuito</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~18:00</div>
           <div class="tl-content">
             <h4>🏨 Check-in Blairmore House</h4>
-            <p>Check-in per 2 notti su Skye</p>
-            <div class="meta-row"><span class="badge badge-ok">796 per 2 notti</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
+            <p>2 notti. Colaz. NON inclusa ❌</p>
+            <div class="meta-row"><span class="badge b-cost">£796/2 notti</span></div></div></div>
+        <div class="tl-item ">
           <div class="tl-time">~20:00</div>
           <div class="tl-content">
             <h4>🍽️ Cena: Sea Breezes</h4>
-            <p>Seafood fresco sul porto. Langoustines, scallops, salmon locali.</p>
-            <div class="meta-row"><span class="badge badge-dur">1h 30m &bull; ~£22/pp</span><span class="badge badge-ok">Marine Buildings, Portree IV51 9HD</span>
-            </div>
-          </div>
-        </div>
+            <p>Langoustines, scallops freschi.</p>
+            <div class="meta-row"><span class="badge b-dur">1h 30m</span><span class="badge b-cost">~£22/pp</span><span class="badge b-ok">Marine Buildings, Portree</span></div></div></div>
       </div>
     </div>
   </div>
   <div class="day-card">
     <div class="day-head" style="background:#2E7D32" onclick="toggleDay(this)">
-      <span class="day-badge">Giorno 4<br>Venerdì 4 Aprile</span>
-      <span class="day-title">🏝️ Giornata intera sull'Isola di Skye</span>
-      <span style="font-size:.78rem;background:rgba(255,255,255,.2);border-radius:10px;padding:2px 8px;margin-right:8px">~80 km in giro per l'isola</span>
-      <span class="day-arrow">▼</span>
+      <div class="day-badge">G4<br>Venerdì 4 Aprile</div>
+      <div class="day-title">🏝️ Giornata intera su Skye + 🥃 Talisker Distillery</div>
+      <div style="font-size:.74rem;background:rgba(255,255,255,.2);border-radius:8px;padding:2px 8px;margin-right:6px">~80 km</div>
+      <div class="day-arrow">▼</div>
     </div>
     <div class="day-body">
       <div class="timeline">
-        <div class="tl-item">
+        <div class="tl-item ">
+          <div class="tl-time">Mattina</div>
+          <div class="tl-content">
+            <h4>☕ Colazione a pagamento</h4>
+            <p>Colaz. NON inclusa ❌</p>
+            <div class="meta-row"><span class="badge b-cost">~£10/pp</span></div></div></div>
+        <div class="tl-item ">
           <div class="tl-time">~08:00</div>
           <div class="tl-content">
             <h4>🏔️ Old Man of Storr</h4>
-            <p>PARTIRE PRESTO! 2,4 km A/R, 2h totali. Panorama spettacolare. Bambini 6+ ce la fanno!</p>
-            <div class="meta-row"><span class="badge badge-dur">2h 30m &bull; Parcheggio £2-3</span><span class="badge badge-warn">⚠️ Arrivare prima delle 9. Stivali waterproof!</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~11:00</div>
+            <p>PARTIRE PRESTISSIMO! 2,4km A/R. Panorama spettacolare.</p>
+            <div class="meta-row"><span class="badge b-dur">2h 30m</span><span class="badge b-cost">Parcheggio £2-3</span><span class="badge b-warn">⚠️ Prima delle 9! Stivali!</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~10:30</div>
           <div class="tl-content">
             <h4>🧚 Fairy Glen (Uig)</h4>
-            <p>Valle magica con colline smeraldo, laghetto e spirali di pietra. Perfetto per bambini!</p>
-            <div class="meta-row"><span class="badge badge-dur">1h &bull; Gratuito</span><span class="badge badge-ok">Il luogo più magico di Skye</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~12:30</div>
+            <p>Valle magica. Bambini adorano spirali di pietra!</p>
+            <div class="meta-row"><span class="badge b-dur">1h</span><span class="badge b-cost">Gratuito</span></div></div></div>
+        <div class="tl-item is-lunch">
+          <div class="tl-time">~12:00</div>
           <div class="tl-content">
-            <h4>🍕 Pranzo: Pizza in the Skye</h4>
-            <p>Food truck di pizza napoletana su Skye! Uno dei migliori posti per famiglie.</p>
-            <div class="meta-row"><span class="badge badge-dur">1h &bull; ~£12/pp</span><span class="badge badge-ok">~15 min da Portree. Prenotare online</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~14:00</div>
+            <h4>🥪 Pranzo al sacco al Fairy Glen</h4>
+            <p>Picnic in paesaggio da favola!</p>
+            <div class="meta-row"><span class="badge b-dur">45 min</span></div></div></div>
+        <div class="tl-item is-whisky">
+          <div class="tl-time">~13:30</div>
           <div class="tl-content">
-            <h4>🦕 An Corran Beach – Impronte Dinosauro</h4>
-            <p>IMPRONTE DI DINOSAURO nel sandstone! 170 milioni di anni. Bambini adorano!</p>
-            <div class="meta-row"><span class="badge badge-dur">1h 30m &bull; Gratuito</span><span class="badge badge-warn">⚠️ Solo con bassa marea – controllare orari</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~16:00</div>
+            <h4>🥃 Talisker Distillery (Carbost)</h4>
+            <p>L'UNICA distilleria di Skye! Marino e torbato. Vista sul loch.</p>
+            <div class="meta-row"><span class="badge b-dur">1h 30m</span><span class="badge b-cost">£15/ad</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~15:30</div>
+          <div class="tl-content">
+            <h4>🦕 An Corran Beach – Dinosauri</h4>
+            <p>170 milioni di anni nel sandstone!</p>
+            <div class="meta-row"><span class="badge b-dur">1h 30m</span><span class="badge b-cost">Gratuito</span><span class="badge b-warn">⚠️ Solo bassa marea</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~17:30</div>
           <div class="tl-content">
             <h4>💧 Fairy Pools</h4>
-            <p>Piscine cristalline ai piedi dei Cuillin. Camminata facile ~1,5 km. Acqua turchese!</p>
-            <div class="meta-row"><span class="badge badge-dur">2h &bull; Parcheggio £3</span><span class="badge badge-ok">Stivali waterproof! Acqua gelida ma bellissima</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~18:30</div>
-          <div class="tl-content">
-            <h4>🛝 Sligachan Adventure Playground</h4>
-            <p>Grande playground con zip-line. Far sfogare i bambini prima di cena!</p>
-            <div class="meta-row"><span class="badge badge-dur">45 min &bull; Gratuito</span><span class="badge badge-ok">Vicino Sligachan Hotel sulla A87</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
+            <p>Piscine turchesi ai Cuillin. ~1,5km easy.</p>
+            <div class="meta-row"><span class="badge b-dur">2h</span><span class="badge b-cost">Parcheggio £3</span><span class="badge b-ok">Stivali!</span></div></div></div>
+        <div class="tl-item ">
           <div class="tl-time">~20:30</div>
           <div class="tl-content">
             <h4>🍽️ Cena: Antlers Bar & Grill</h4>
-            <p>Fish & chips leggendari, sticky toffee pudding.</p>
-            <div class="meta-row"><span class="badge badge-dur">1h 30m &bull; ~£18/pp</span><span class="badge badge-ok">Somerled Square, Portree IV51 9EH</span>
-            </div>
-          </div>
-        </div>
+            <p>Fish & chips + sticky toffee pudding.</p>
+            <div class="meta-row"><span class="badge b-dur">1h 30m</span><span class="badge b-cost">~£18/pp</span><span class="badge b-ok">Somerled Sq, Portree</span></div></div></div>
       </div>
     </div>
   </div>
   <div class="day-card">
     <div class="day-head" style="background:#4A148C" onclick="toggleDay(this)">
-      <span class="day-badge">Giorno 5<br>Sabato 5 Aprile</span>
-      <span class="day-title">Skye → Pitlochry</span>
-      <span style="font-size:.78rem;background:rgba(255,255,255,.2);border-radius:10px;padding:2px 8px;margin-right:8px">~215 km &bull; ~3h 30m</span>
-      <span class="day-arrow">▼</span>
+      <div class="day-badge">G5<br>Sabato 5 Aprile</div>
+      <div class="day-title">Skye → 🥃 Dalwhinnie (A9) → 🥃 Edradour → Pitlochry</div>
+      <div style="font-size:.74rem;background:rgba(255,255,255,.2);border-radius:8px;padding:2px 8px;margin-right:6px">~215 km</div>
+      <div class="day-arrow">▼</div>
     </div>
     <div class="day-body">
       <div class="timeline">
-        <div class="tl-item">
+        <div class="tl-item ">
+          <div class="tl-time">Mattina</div>
+          <div class="tl-content">
+            <h4>☕ Colazione a pagamento</h4>
+            <p>Colaz. NON inclusa ❌</p>
+            <div class="meta-row"><span class="badge b-cost">~£10/pp</span></div></div></div>
+        <div class="tl-item ">
           <div class="tl-time">~09:00</div>
           <div class="tl-content">
-            <h4>🏰 Dunvegan Castle (opz.)</h4>
-            <p>Il castello più antico di Skye, ancora abitato! Giardini + boat trip per vedere foche.</p>
-            <div class="meta-row"><span class="badge badge-dur">1h 30m &bull; £16 adulto, £9 bimbo</span><span class="badge badge-ok">Dunvegan IV55 8WF. Se i bimbi non sono stanchi</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~11:00</div>
-          <div class="tl-content">
             <h4>🌉 Skye Bridge → Continente</h4>
-            <p>Ultima occhiata a Skye, poi via verso sud</p>
-            <div class="meta-row">
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~13:00</div>
+            <p>Ultima occhiata a Skye</p>
+            <div class="meta-row"><span class="badge b-cost">Gratuito</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~11:30</div>
           <div class="tl-content">
-            <h4>🍽️ Pranzo a Fort William</h4>
-            <p>Pausa pranzo a Fort William (base del Ben Nevis)</p>
-            <div class="meta-row"><span class="badge badge-dur">1h &bull; ~£15/pp</span><span class="badge badge-ok">Ben Nevis Inn – bellissima vista</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~15:30</div>
+            <h4>📍 Fort William – pausa veloce</h4>
+            <p>Acquistare provviste pranzo al sacco + caffè</p>
+            <div class="meta-row"><span class="badge b-dur">30 min</span></div></div></div>
+        <div class="tl-item is-lunch">
+          <div class="tl-time">~12:30</div>
           <div class="tl-content">
-            <h4>🚐 Arrivo Pitlochry via A9</h4>
-            <p>Pittoresco borgo nel cuore del Perthshire</p>
-            <div class="meta-row"><span class="badge badge-dur">~2h 30m drive</span><span class="badge badge-ok">215 km totali da Portree</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~16:30</div>
+            <h4>🥪 Pranzo al sacco lungo l'A82</h4>
+            <p>Piazzola panoramica con vista sul Loch Lochy o Laggan</p>
+            <div class="meta-row"></div></div></div>
+        <div class="tl-item is-whisky">
+          <div class="tl-time">~14:00</div>
           <div class="tl-content">
-            <h4>🥃 Blair Athol Distillery</h4>
-            <p>Una delle distillerie più antiche (1798!). Tour adulti + shop.</p>
-            <div class="meta-row"><span class="badge badge-dur">1h &bull; Tour ~£10 adulto</span><span class="badge badge-ok">Perth Road, Pitlochry PH16 5LY</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~18:00</div>
+            <h4>🥃 Dalwhinnie Distillery (A9)</h4>
+            <p>La distilleria più alta della Scozia (327m s.l.m.)! Sulla A9, è letteralmente sulla strada!</p>
+            <div class="meta-row"><span class="badge b-dur">1h 30m</span><span class="badge b-cost">£15/ad</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~16:00</div>
           <div class="tl-content">
-            <h4>🏨 Check-in Westlands of Pitlochry</h4>
-            <p>Check-in, relax serale</p>
-            <div class="meta-row"><span class="badge badge-ok">Colazione inclusa domani</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~19:30</div>
+            <h4>📍 Arrivo area Pitlochry</h4>
+            <p>Drive finale verso Pitlochry</p>
+            <div class="meta-row"><span class="badge b-dur">~1h</span></div></div></div>
+        <div class="tl-item is-whisky">
+          <div class="tl-time">~17:00</div>
+          <div class="tl-content">
+            <h4>🥃 Edradour Distillery</h4>
+            <p>La più piccola di Scozia (dal 1825)! 2 miglia da Pitlochry.</p>
+            <div class="meta-row"><span class="badge b-dur">1h</span><span class="badge b-cost">£10/ad</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~18:30</div>
+          <div class="tl-content">
+            <h4>🏨 Check-in Westlands</h4>
+            <p>Colazione inclusa domani ✅</p>
+            <div class="meta-row"><span class="badge b-cost">£318</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~20:00</div>
           <div class="tl-content">
             <h4>🍽️ Cena: Moulin Inn (1695!)</h4>
-            <p>Pub storico del 1695. Birre artigianali, atmosfera fantastica.</p>
-            <div class="meta-row"><span class="badge badge-dur">1h 30m &bull; ~£18/pp</span><span class="badge badge-ok">11-13 Kirkmichael Rd PH16 5EH</span>
-            </div>
-          </div>
-        </div>
+            <p>Pub storico, birre proprie. Atmosfera fantastica!</p>
+            <div class="meta-row"><span class="badge b-dur">1h 30m</span><span class="badge b-cost">~£18/pp</span><span class="badge b-ok">Kirkmichael Rd PH16 5EH</span></div></div></div>
       </div>
     </div>
   </div>
   <div class="day-card">
     <div class="day-head" style="background:#B71C1C" onclick="toggleDay(this)">
-      <span class="day-badge">Giorno 6<br>Domenica 6 Aprile</span>
-      <span class="day-title">Pitlochry → Edinburgh (con soste imperdibili)</span>
-      <span style="font-size:.78rem;background:rgba(255,255,255,.2);border-radius:10px;padding:2px 8px;margin-right:8px">~110 km &bull; ~1h 30m (senza soste)</span>
-      <span class="day-arrow">▼</span>
+      <div class="day-badge">G6<br>Domenica 6 Aprile</div>
+      <div class="day-title">Pitlochry → 🥃 Deanston → Edinburgh</div>
+      <div style="font-size:.74rem;background:rgba(255,255,255,.2);border-radius:8px;padding:2px 8px;margin-right:6px">~110 km</div>
+      <div class="day-arrow">▼</div>
     </div>
     <div class="day-body">
       <div class="timeline">
-        <div class="tl-item">
+        <div class="tl-item ">
           <div class="tl-time">Mattina</div>
           <div class="tl-content">
-            <h4>🍳 Colazione inclusa</h4>
-            <p>Colazione al Westlands prima di partire</p>
-            <div class="meta-row">
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
+            <h4>🍳 Colazione inclusa ✅</h4>
+            <p>Ultima colazione inclusa! Preparare borsa pranzo.</p>
+            <div class="meta-row"><span class="badge b-cost">Inclusa</span></div></div></div>
+        <div class="tl-item ">
           <div class="tl-time">~09:30</div>
           <div class="tl-content">
             <h4>🏰 Blair Castle</h4>
-            <p>30+ sale arredate, giochi detective per bambini, cervi nel parco, playground. Apre 1 aprile!</p>
-            <div class="meta-row"><span class="badge badge-dur">2h 30m &bull; £14 adulto, £9.50 bimbo</span><span class="badge badge-warn">Blair Atholl PH18 5TL &bull; ⚠️ Prenotare</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~13:00</div>
+            <p>30+ sale, giochi detective bambini, cervi, playground!</p>
+            <div class="meta-row"><span class="badge b-dur">2h 30m</span><span class="badge b-cost">£14/ad, £9.50/b</span><span class="badge b-ok">Blair Atholl PH18 5TL</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~12:30</div>
           <div class="tl-content">
             <h4>🌲 Hermitage Forest (Dunkeld)</h4>
-            <p>Bosco con cascata Braan e alberi di 60m. Bambini adorano correre!</p>
-            <div class="meta-row"><span class="badge badge-dur">1h 30m &bull; Gratuito (parcheggio £2)</span><span class="badge badge-ok">Dunkeld PH8 0HX</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~15:00</div>
+            <p>Bosco, cascata Braan, alberi di 60m!</p>
+            <div class="meta-row"><span class="badge b-dur">1h 30m</span><span class="badge b-cost">Gratuito (parcheggio £2)</span><span class="badge b-ok">Dunkeld PH8 0HX</span></div></div></div>
+        <div class="tl-item is-lunch">
+          <div class="tl-time">~13:30</div>
           <div class="tl-content">
-            <h4>🍽️ Pranzo a Dunkeld</h4>
-            <p>The Taybank: ottimo pub sul fiume Tay</p>
-            <div class="meta-row"><span class="badge badge-dur">1h &bull; ~£15/pp</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
+            <h4>🥪 Pranzo al sacco all'Hermitage</h4>
+            <p>Picnic nel bosco con cascata come sfondo!</p>
+            <div class="meta-row"><span class="badge b-dur">45 min</span></div></div></div>
+        <div class="tl-item is-whisky">
+          <div class="tl-time">~15:30</div>
+          <div class="tl-content">
+            <h4>🥃 Deanston Distillery (Doune)</h4>
+            <p>Ex-fabbrica tessile 1785. Sistema totalmente naturale!</p>
+            <div class="meta-row"><span class="badge b-dur">1h 30m</span><span class="badge b-cost">£12/ad</span></div></div></div>
+        <div class="tl-item ">
           <div class="tl-time">~17:30</div>
           <div class="tl-content">
             <h4>🏰 Stirling Castle (opz.)</h4>
-            <p>Uno dei castelli più importanti di Scozia. Solo se avete energia!</p>
-            <div class="meta-row"><span class="badge badge-dur">2h &bull; £17 adulto, £10.20 bimbo</span><span class="badge badge-ok">Stirling FK8 1EJ</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
+            <p>Solo se avete energia!</p>
+            <div class="meta-row"><span class="badge b-dur">1h 30m</span><span class="badge b-cost">£17/ad, £10.20/b</span><span class="badge b-ok">Stirling FK8 1EJ</span></div></div></div>
+        <div class="tl-item ">
           <div class="tl-time">~19:30</div>
           <div class="tl-content">
-            <h4>🏨 Check-in Frederick House Hotel</h4>
-            <p>Check-in nel cuore di Edinburgh</p>
-            <div class="meta-row"><span class="badge badge-ok">42 Frederick St EH2 1EX</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~20:00</div>
+            <h4>🏨 Check-in Frederick House</h4>
+            <p>Edinburgh centro. Colaz. NON inclusa ❌</p>
+            <div class="meta-row"><span class="badge b-cost">£615/2 notti</span><span class="badge b-ok">42 Frederick St EH2</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~20:30</div>
           <div class="tl-content">
-            <h4>🍽️ Cena: The Mitre (Royal Mile)</h4>
-            <p>Pub tradizionale, menu bambini, vista Royal Mile.</p>
-            <div class="meta-row"><span class="badge badge-dur">1h 30m &bull; ~£18/pp</span><span class="badge badge-ok">131 High St (Royal Mile) EH1 1SG</span>
-            </div>
-          </div>
-        </div>
+            <h4>🍽️ Cena: The Mitre Bar</h4>
+            <p>Menu bambini, Royal Mile. Benvenuti!</p>
+            <div class="meta-row"><span class="badge b-dur">1h 30m</span><span class="badge b-cost">~£18/pp</span><span class="badge b-ok">131 High St EH1 1SG</span></div></div></div>
       </div>
     </div>
   </div>
   <div class="day-card">
     <div class="day-head" style="background:#E65100" onclick="toggleDay(this)">
-      <span class="day-badge">Giorno 7<br>Lunedì 7 Aprile</span>
-      <span class="day-title">🏙️ Giornata intera a Edinburgh</span>
-      <span style="font-size:.78rem;background:rgba(255,255,255,.2);border-radius:10px;padding:2px 8px;margin-right:8px">A piedi per il centro</span>
-      <span class="day-arrow">▼</span>
+      <div class="day-badge">G7<br>Lunedì 7 Aprile</div>
+      <div class="day-title">🏙️ Giornata intera a Edinburgh</div>
+      <div style="font-size:.74rem;background:rgba(255,255,255,.2);border-radius:8px;padding:2px 8px;margin-right:6px">A piedi</div>
+      <div class="day-arrow">▼</div>
     </div>
     <div class="day-body">
       <div class="timeline">
-        <div class="tl-item">
+        <div class="tl-item ">
+          <div class="tl-time">Mattina</div>
+          <div class="tl-content">
+            <h4>☕ Colazione a pagamento</h4>
+            <p>Colaz. NON inclusa ❌. Bakery in centro.</p>
+            <div class="meta-row"><span class="badge b-cost">~£8/pp</span></div></div></div>
+        <div class="tl-item ">
           <div class="tl-time">~09:00</div>
           <div class="tl-content">
             <h4>🏰 Edinburgh Castle</h4>
-            <p>IL castello più visitato di Scozia! Crown Jewels, cannone delle 13:00. Mezza giornata.</p>
-            <div class="meta-row"><span class="badge badge-dur">3h &bull; £20 adulto, £12 bimbo</span><span class="badge badge-warn">⚠️ PRENOTARE OBBLIGATORIO – peak season!</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
+            <p>Crown Jewels, Grande Salone, cannone delle 13:00!</p>
+            <div class="meta-row"><span class="badge b-dur">3h</span><span class="badge b-cost">£20/ad, £12/b</span><span class="badge b-warn">⚠️ PRENOTARE OBBLIGATORIO</span></div></div></div>
+        <div class="tl-item is-lunch">
           <div class="tl-time">~12:30</div>
           <div class="tl-content">
-            <h4>🍽️ Pranzo Grassmarket</h4>
-            <p>Quartiere bohémien con ottimi pub. Victoria Street (ispirazione Diagon Alley HP!)</p>
-            <div class="meta-row"><span class="badge badge-dur">1h &bull; ~£18/pp</span><span class="badge badge-ok">Grassmarket EH1 2JR</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
+            <h4>🥪 Pranzo al sacco a Holyrood Park</h4>
+            <p>Picnic con vista sul castello!</p>
+            <div class="meta-row"><span class="badge b-dur">45 min</span></div></div></div>
+        <div class="tl-item ">
           <div class="tl-time">~14:00</div>
           <div class="tl-content">
-            <h4>🎩 Camera Obscura & World of Illusions</h4>
-            <p>5 piani di illusioni interattive! I bambini impazziranno.</p>
-            <div class="meta-row"><span class="badge badge-dur">2h &bull; £14.85 adulto, £11.25 bimbo</span><span class="badge badge-ok">549 Castlehill, Royal Mile EH1 2ND</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
+            <h4>🎩 Camera Obscura</h4>
+            <p>5 piani di illusioni! Bambini impazziscono.</p>
+            <div class="meta-row"><span class="badge b-dur">2h</span><span class="badge b-cost">£14.85/ad, £11.25/b</span><span class="badge b-ok">Castlehill EH1 2ND</span></div></div></div>
+        <div class="tl-item is-whisky">
           <div class="tl-time">~16:30</div>
           <div class="tl-content">
-            <h4>🧸 Museum of Childhood + Royal Mile</h4>
-            <p>3 piani di giocattoli storici (gratis!) + passeggiata sulla Royal Mile.</p>
-            <div class="meta-row"><span class="badge badge-dur">1h 30m &bull; Gratuito</span><span class="badge badge-ok">42 High St EH1 1TG</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
+            <h4>🥃 Scotch Whisky Experience</h4>
+            <p>Barrel ride! Tour sensoriale. PERFETTO per famiglie.</p>
+            <div class="meta-row"><span class="badge b-dur">1h 30m</span><span class="badge b-cost">£16/ad, £8/b</span><span class="badge b-warn">⚠️ Prenotare consigliato</span></div></div></div>
+        <div class="tl-item ">
           <div class="tl-time">~18:30</div>
           <div class="tl-content">
-            <h4>⛰️ Arthur's Seat (opz.)</h4>
-            <p>Vulcano estinto con vista panoramica. Tramonto magico! Con bimbi 6+ fattibile.</p>
-            <div class="meta-row"><span class="badge badge-dur">2h &bull; Gratuito</span><span class="badge badge-ok">Non troppo tardi! 251m quota</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
+            <h4>🧸 Museum of Childhood + Royal Mile</h4>
+            <p>3 piani giocattoli storici GRATIS! + passeggiata.</p>
+            <div class="meta-row"><span class="badge b-dur">1h</span><span class="badge b-cost">Gratuito</span><span class="badge b-ok">42 High St EH1 1TG</span></div></div></div>
+        <div class="tl-item ">
           <div class="tl-time">~20:00</div>
           <div class="tl-content">
-            <h4>🍽️ Cena: Ondine Restaurant</h4>
-            <p>Miglior seafood di Edinburgh. Ultima cena scozzese indimenticabile!</p>
-            <div class="meta-row"><span class="badge badge-dur">2h &bull; ~£35-45/pp</span><span class="badge badge-warn">⚠️ PRENOTARE ADESSO – molto richiesto</span>
-            </div>
-          </div>
-        </div>
+            <h4>🍽️ Cena di gala: Ondine Restaurant</h4>
+            <p>Miglior seafood Edinburgh. Ultima cena!</p>
+            <div class="meta-row"><span class="badge b-dur">2h</span><span class="badge b-cost">~£35-45/pp</span><span class="badge b-warn">⚠️ PRENOTARE ADESSO</span></div></div></div>
       </div>
     </div>
   </div>
   <div class="day-card">
     <div class="day-head" style="background:#37474F" onclick="toggleDay(this)">
-      <span class="day-badge">Giorno 8<br>Martedì 8 Aprile</span>
-      <span class="day-title">Edinburgh → ✈️ Aeroporto – Fine del viaggio</span>
-      <span style="font-size:.78rem;background:rgba(255,255,255,.2);border-radius:10px;padding:2px 8px;margin-right:8px">~13 km verso l'aeroporto</span>
-      <span class="day-arrow">▼</span>
+      <div class="day-badge">G8<br>Martedì 8 Aprile</div>
+      <div class="day-title">Edinburgh → ✈️ Edinburgh 14:10 → Milano 17:35</div>
+      <div style="font-size:.74rem;background:rgba(255,255,255,.2);border-radius:8px;padding:2px 8px;margin-right:6px">~13 km</div>
+      <div class="day-arrow">▼</div>
     </div>
     <div class="day-body">
       <div class="timeline">
-        <div class="tl-item">
+        <div class="tl-item ">
           <div class="tl-time">Mattina</div>
           <div class="tl-content">
-            <h4>🍳 Ultima colazione scozzese</h4>
-            <p>Colazione all'hotel</p>
-            <div class="meta-row">
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~09:30</div>
+            <h4>☕ Colaz. a pagamento</h4>
+            <p>Colaz. NON inclusa ❌</p>
+            <div class="meta-row"><span class="badge b-cost">~£8/pp</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~09:00</div>
           <div class="tl-content">
-            <h4>🏛️ National Museum of Scotland</h4>
-            <p>GRATIS! Dinosauri, Ancient Egypt, Scottish History. Hands-on per bambini.</p>
-            <div class="meta-row"><span class="badge badge-dur">1h 30m &bull; Gratuito 🆓</span><span class="badge badge-ok">Chambers St EH1 1JF</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~11:30</div>
+            <h4>🏛️ National Museum</h4>
+            <p>GRATIS! Dinosauri, storia scozzese. Hands-on bambini.</p>
+            <div class="meta-row"><span class="badge b-dur">2h</span><span class="badge b-cost">Gratuito 🆓</span><span class="badge b-ok">Chambers St EH1 1JF</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~11:00</div>
           <div class="tl-content">
             <h4>⛪ Greyfriars Kirkyard</h4>
-            <p>Tomba di Greyfriars Bobby, il fedele cane di Edinburgh. I bambini adorano la storia!</p>
-            <div class="meta-row"><span class="badge badge-dur">30 min &bull; Gratuito</span><span class="badge badge-ok">Greyfriars Pl EH1 2QQ</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
+            <p>Tomba di Greyfriars Bobby. Bambini adorano!</p>
+            <div class="meta-row"><span class="badge b-dur">30 min</span><span class="badge b-cost">Gratuito</span></div></div></div>
+        <div class="tl-item is-lunch">
+          <div class="tl-time">~11:30</div>
+          <div class="tl-content">
+            <h4>🥪 Ultimo snack / caffè</h4>
+            <p>Victoria Street o bakery nel centro</p>
+            <div class="meta-row"><span class="badge b-dur">30 min</span><span class="badge b-cost">~£5/pp</span></div></div></div>
+        <div class="tl-item ">
           <div class="tl-time">~12:30</div>
           <div class="tl-content">
-            <h4>🍽️ Ultimo pranzo</h4>
-            <p>Fish & chips classici o quick lunch</p>
-            <div class="meta-row"><span class="badge badge-dur">~£10-15/pp</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time">~14:00</div>
+            <h4>🚐 ⚠️ PARTENZA AEROPORTO</h4>
+            <p>PARTIRE ENTRO LE 12:30! Riconsegnare van prima.</p>
+            <div class="meta-row"><span class="badge b-dur">~30 min</span><span class="badge b-ok">A8/M8 verso EAP</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">~13:00</div>
           <div class="tl-content">
-            <h4>🚐 Edinburgh Airport</h4>
-            <p>Riconsegna van, check-in aeroporto</p>
-            <div class="meta-row"><span class="badge badge-dur">~30-45 min</span><span class="badge badge-ok">A8/M8 verso aeroporto</span>
-            </div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-time"></div>
+            <h4>🛫 Check-in Edinburgh Airport</h4>
+            <p>Sicurezza, gate. Essere in gate entro 13:30.</p>
+            <div class="meta-row"><span class="badge b-dur">1h</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">14:10</div>
           <div class="tl-content">
-            <h4>✈️ ARRIVEDERCI SCOZIA! 🏴󠁧󠁢󠁳󠁣󠁴󠁿</h4>
+            <h4>✈️ Partenza Edinburgh</h4>
+            <p>Decollo verso Milano! 🏴󠁧󠁢󠁳󠁣󠁴󠁿</p>
+            <div class="meta-row"><span class="badge b-dur">2h 25m</span></div></div></div>
+        <div class="tl-item ">
+          <div class="tl-time">17:35</div>
+          <div class="tl-content">
+            <h4>🏠 Arrivo Milano</h4>
             <p>Fine del viaggio. Ricordi indimenticabili!</p>
-            <div class="meta-row">
-            </div>
-          </div>
+            <div class="meta-row"></div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DISTILLERIE ═══ -->
+<div id="distillerie" class="section">
+  <div class="card" style="margin-bottom:0;border-radius:var(--r) var(--r) 0 0">
+    <div class="distill-intro">
+      <h2>🥃 Whisky Trail – Distillerie lungo il Percorso</h2>
+      <p>Il vostro roadtrip attraversa le 3 principali regioni whisky: <strong>Speyside</strong> (il cuore), <strong>Highland</strong> (A9), <strong>Island</strong> (Skye – Talisker). Non tutte nello stesso giorno!</p>
+    </div>
+  </div>
+  <div class="card" style="border-radius:0 0 var(--r) var(--r);margin-top:0">
+    <div class="regions-strip">
+      <span class="region-chip" style="background:#FFF0D0;color:#7D5A0A;border-color:#F0C070">🏅 Speyside – G2 A96</span>
+      <span class="region-chip" style="background:#E8F4FD;color:#1A5276;border-color:#AED6F1">⛰️ Highland – A9</span>
+      <span class="region-chip" style="background:#E8F5E9;color:#1F6B3B;border-color:#A9DFBF">🌊 Island (Skye) – G4</span>
+      <span class="region-chip" style="background:#F4ECF7;color:#6B3FA0;border-color:#C39BD3">🏙️ Edinburgh – G7</span>
+    </div>
+    <div class="distill-grid">
+      <div class="distill-card" style="border-top-color:#8B4513">
+        <span class="d-day">G2</span>
+        <h3>🥃 Strathisla</h3>
+        <div class="d-region" style="color:var(--whisky)">📍 Regione: Speyside</div>
+        <div class="d-addr">Keith, AB55 5BS – SULLA A96</div>
+        <div class="d-type">🥃 Speyside Single Malt – la più antica (1786)</div>
+        <div class="d-desc">La più bella del Speyside! Architettura con torrette iconiche. Imperdibile se passate sull'A96.</div>
+        <div class="d-bottom">
+          <span class="d-price">£15 (incl. tasting)</span>
+          <span class="d-route-badge">🛣️ Sulla strada!</span>
         </div>
       </div>
+      <div class="distill-card" style="border-top-color:#8B4513">
+        <span class="d-day">G2</span>
+        <h3>🥃 Benromach</h3>
+        <div class="d-region" style="color:var(--whisky)">📍 Regione: Speyside</div>
+        <div class="d-addr">Forres, IV36 3EB – SULLA A96</div>
+        <div class="d-type">🥃 Speyside Single Malt – micro-distillery artigianale</div>
+        <div class="d-desc">Solo 2 dipendenti! Tour molto intimo. A 30 min da Strathisla.</div>
+        <div class="d-bottom">
+          <span class="d-price">£12 (incl. tasting)</span>
+          <span class="d-route-badge">🛣️ Sulla strada!</span>
+        </div>
+      </div>
+      <div class="distill-card" style="border-top-color:#8B4513">
+        <span class="d-day">G2</span>
+        <h3>🥃 Glen Grant</h3>
+        <div class="d-region" style="color:var(--whisky)">📍 Regione: Speyside</div>
+        <div class="d-addr">Rothes, AB38 – 15 min da A96</div>
+        <div class="d-type">🥃 Speyside Single Malt – leggero e floreale</div>
+        <div class="d-desc">Giardini vittoriani spettacolari inclusi nel tour. Ottimo per bambini!</div>
+        <div class="d-bottom">
+          <span class="d-price">£15 (incl. giardini)</span>
+          <span class="d-route-badge">📍 Piccola deviazione</span>
+        </div>
+      </div>
+      <div class="distill-card" style="border-top-color:#C0392B">
+        <span class="d-day">G4</span><span class="must-stop" style="margin-left:6px">⭐ IMPERDIBILE</span>
+        <h3>🥃 Talisker ⭐</h3>
+        <div class="d-region" style="color:var(--whisky)">📍 Regione: Island/Skye</div>
+        <div class="d-addr">Carbost, Isle of Skye IV47 8SR</div>
+        <div class="d-type">🥃 Island Single Malt – marino, torbato, icona di Skye</div>
+        <div class="d-desc">L'UNICA distilleria di Skye! Vista sul Loch Harport. Assolutamente imperdibile. Il whisky più 'selvaggio' di Scozia.</div>
+        <div class="d-bottom">
+          <span class="d-price">£15 (incl. tasting)</span>
+          <span class="d-route-badge">🛣️ Sulla strada!</span>
+        </div>
+      </div>
+      <div class="distill-card" style="border-top-color:#C0392B">
+        <span class="d-day">G5</span><span class="must-stop" style="margin-left:6px">⭐ IMPERDIBILE</span>
+        <h3>🥃 Dalwhinnie ⭐</h3>
+        <div class="d-region" style="color:var(--whisky)">📍 Regione: Highland</div>
+        <div class="d-addr">Dalwhinnie, PH19 1AB – SULLA A9</div>
+        <div class="d-type">🥃 Highland Single Malt – la più alta (327m s.l.m.)!</div>
+        <div class="d-desc">Letteralmente sulla A9 – impossibile non fermarsi. La distilleria più alta e fredda della Scozia!</div>
+        <div class="d-bottom">
+          <span class="d-price">£15 (incl. tasting)</span>
+          <span class="d-route-badge">🛣️ Sulla strada!</span>
+        </div>
+      </div>
+      <div class="distill-card" style="border-top-color:#8B4513">
+        <span class="d-day">G5</span>
+        <h3>🥃 Edradour</h3>
+        <div class="d-region" style="color:var(--whisky)">📍 Regione: Highland</div>
+        <div class="d-addr">Pitlochry, PH16 5JP – 2 miglia</div>
+        <div class="d-type">🥃 Highland Single Malt – la più piccola di Scozia (dal 1825)</div>
+        <div class="d-desc">Charming e piccola. I bambini adorano vedere il processo artigianale. Solo 3 dipendenti.</div>
+        <div class="d-bottom">
+          <span class="d-price">£10 (incl. tasting)</span>
+          <span class="d-route-badge">📍 Piccola deviazione</span>
+        </div>
+      </div>
+      <div class="distill-card" style="border-top-color:#8B4513">
+        <span class="d-day">G5</span>
+        <h3>🥃 Blair Athol</h3>
+        <div class="d-region" style="color:var(--whisky)">📍 Regione: Highland</div>
+        <div class="d-addr">Perth Rd, Pitlochry PH16 5LY</div>
+        <div class="d-type">🥃 Highland Single Malt – nel centro di Pitlochry</div>
+        <div class="d-desc">In centro a Pitlochry. Facile da abbinare a passeggiata in paese.</div>
+        <div class="d-bottom">
+          <span class="d-price">£10 (incl. tasting)</span>
+          <span class="d-route-badge">📍 Piccola deviazione</span>
+        </div>
+      </div>
+      <div class="distill-card" style="border-top-color:#8B4513">
+        <span class="d-day">G5</span>
+        <h3>🥃 Aberfeldy</h3>
+        <div class="d-region" style="color:var(--whisky)">📍 Regione: Highland</div>
+        <div class="d-addr">Aberfeldy, PH15 2EB – A827</div>
+        <div class="d-type">🥃 Highland Single Malt – 'L'acqua della vita'</div>
+        <div class="d-desc">Dewar's World of Whisky museum incluso! 20 min da Pitlochry sulla A827.</div>
+        <div class="d-bottom">
+          <span class="d-price">£15 (incl. museo)</span>
+          <span class="d-route-badge">📍 Piccola deviazione</span>
+        </div>
+      </div>
+      <div class="distill-card" style="border-top-color:#8B4513">
+        <span class="d-day">G6</span>
+        <h3>🥃 Deanston</h3>
+        <div class="d-region" style="color:var(--whisky)">📍 Regione: Highland</div>
+        <div class="d-addr">Doune, FK16 6AG – vicino Stirling</div>
+        <div class="d-type">🥃 Highland Single Malt – ex-fabbrica tessile 1785</div>
+        <div class="d-desc">Sistema 100% naturale, no refrigerazione! Vicino a Stirling Castle.</div>
+        <div class="d-bottom">
+          <span class="d-price">£12 (incl. tasting)</span>
+          <span class="d-route-badge">📍 Piccola deviazione</span>
+        </div>
+      </div>
+      <div class="distill-card" style="border-top-color:#C0392B">
+        <span class="d-day">G7</span><span class="must-stop" style="margin-left:6px">⭐ IMPERDIBILE</span>
+        <h3>🥃 Scotch Whisky Exp. ⭐</h3>
+        <div class="d-region" style="color:var(--whisky)">📍 Regione: Edinburgh</div>
+        <div class="d-addr">354 Castlehill EH1 2NE – Royal Mile</div>
+        <div class="d-type">🥃 Tutte le regioni – experiential tour immersivo</div>
+        <div class="d-desc">IL MIGLIORE per famiglie! Barrel ride, 3.384 bottiglie, degustazione virtuale. Accanto all'Edinburgh Castle.</div>
+        <div class="d-bottom">
+          <span class="d-price">£16/ad, £8/bimbo</span>
+          <span class="d-route-badge">🛣️ Sulla strada!</span>
+        </div>
+      </div>
+      <div class="distill-card" style="border-top-color:#8B4513">
+        <span class="d-day">G7</span>
+        <h3>🥃 Johnnie Walker Edinburgh</h3>
+        <div class="d-region" style="color:var(--whisky)">📍 Regione: Edinburgh</div>
+        <div class="d-addr">145 Princes St, EH2 4BL</div>
+        <div class="d-type">🥃 Blended Scotch – esperienza moderna su 8 piani</div>
+        <div class="d-desc">Moderno e molto adulto. Vista su Edinburgh. Da abbinare con il Scotch Whisky Experience.</div>
+        <div class="d-bottom">
+          <span class="d-price">£25 (esperienza)</span>
+          <span class="d-route-badge">📍 Piccola deviazione</span>
+        </div>
+      </div>
+    </div>
+    <div style="padding:12px 16px 14px;font-size:.8rem;color:#7D5A0A;background:#FFFBF0;border-top:1px solid #F0C070">
+      💡 <strong>Consiglio:</strong> Con bambini scegliere massimo 1-2 distillerie al giorno. Priorità assoluta: <strong>Talisker</strong> (Skye), <strong>Strathisla</strong> (A96), <strong>Dalwhinnie</strong> (A9), <strong>Scotch Whisky Experience</strong> (Edinburgh). Le aree esterne sono generalmente gratuite e accessibili a tutti!
     </div>
   </div>
 </div>
 
 <!-- ═══ ATTRAZIONI ═══ -->
 <div id="attrazioni" class="section">
-  <div class="card" style="margin-bottom:0;border-radius:var(--radius) var(--radius) 0 0">
-    <div class="sec-head"><h2>🏰 Attrazioni & Punti di Interesse</h2><p>24 attrazioni selezionate – clicca per filtrare per tappa</p></div>
+  <div class="card" style="margin-bottom:0;border-radius:var(--r) var(--r) 0 0">
+    <div class="sec-head"><h2>🏰 Attrazioni & Punti di Interesse</h2><p>Filtra per tappa</p></div>
   </div>
-  <div class="card" style="border-radius:0 0 var(--radius) var(--radius);margin-top:0">
-    <div class="tappa-filter">
+  <div class="card" style="border-radius:0 0 var(--r) var(--r);margin-top:0">
+    <div class="filter-wrap">
       <button class="filter-btn active" onclick="filterPoi('all',this)">Tutte</button>
       <button class="filter-btn" onclick="filterPoi('Edinburgh',this)">🏙️ Edinburgh</button>
       <button class="filter-btn" onclick="filterPoi('Stonehaven',this)">🏰 Stonehaven</button>
@@ -1014,388 +1124,238 @@
     </div>
     <div class="poi-grid" id="poiGrid">
       <div class="poi-card" data-tappa="Edinburgh">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Edinburgh</span><br>
-            <h3>🏰 Edinburgh Castle</h3>
-          </div>
-          <span class="poi-book book-yes" style="white-space:nowrap;flex-shrink:0">⚠️ Prenotare OBBLIGATORIO</span>
+        <span class="poi-tag">Edinburgh</span>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <h3>🏰 Edinburgh Castle</h3>
+          <span class="poi-book bk-yes" style="flex-shrink:0;margin-left:6px">⚠️ OBBLIGATORIO</span>
         </div>
-        <div class="poi-loc">📍 Castle Hill, EH1 2NG</div>
+        <div class="poi-loc">📍 Castle Hill EH1 2NG</div>
         <div class="poi-prices">
-          <span class="price-tag ">👤 £20</span>
-          <span class="price-tag ">👦 £12 (5-15)</span>
+          <span class="price-tag">👤 £20</span>
+          <span class="price-tag">👦 £12 (5-15)</span>
         </div>
-        <div class="orari">🕐 9:30-18:00</div>
+        <div style="font-size:.73rem;color:#666">🕐 9:30-18:00</div>
       </div>
       <div class="poi-card" data-tappa="Edinburgh">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Edinburgh</span><br>
-            <h3>🎩 Camera Obscura</h3>
-          </div>
-          <span class="poi-book book-no" style="white-space:nowrap;flex-shrink:0">Consigliata</span>
+        <span class="poi-tag">Edinburgh</span>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <h3>🎩 Camera Obscura</h3>
+          <span class="poi-book bk-rec" style="flex-shrink:0;margin-left:6px">Consigliata</span>
         </div>
-        <div class="poi-loc">📍 Castlehill, Royal Mile EH1 2ND</div>
+        <div class="poi-loc">📍 Castlehill EH1 2ND</div>
         <div class="poi-prices">
-          <span class="price-tag ">👤 £14.85</span>
-          <span class="price-tag ">👦 £11.25 (5-15)</span>
+          <span class="price-tag">👤 £14.85</span>
+          <span class="price-tag">👦 £11.25</span>
         </div>
-        <div class="orari">🕐 9:30-21:00</div>
+        <div style="font-size:.73rem;color:#666">🕐 9:30-21:00</div>
       </div>
       <div class="poi-card" data-tappa="Edinburgh">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Edinburgh</span><br>
-            <h3>🏛️ National Museum</h3>
-          </div>
-          <span class="poi-book book-no" style="white-space:nowrap;flex-shrink:0">No prenotazione</span>
+        <span class="poi-tag">Edinburgh</span>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <h3>🏛️ National Museum</h3>
+          <span class="poi-book bk-no" style="flex-shrink:0;margin-left:6px">No</span>
         </div>
-        <div class="poi-loc">📍 Chambers St, EH1 1JF</div>
+        <div class="poi-loc">📍 Chambers St EH1 1JF</div>
         <div class="poi-prices">
           <span class="price-tag free">👤 GRATIS 🆓</span>
           <span class="price-tag free">👦 GRATIS 🆓</span>
         </div>
-        <div class="orari">🕐 10:00-17:00</div>
+        <div style="font-size:.73rem;color:#666">🕐 10:00-17:00</div>
       </div>
       <div class="poi-card" data-tappa="Edinburgh">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Edinburgh</span><br>
-            <h3>👑 Palace of Holyroodhouse</h3>
-          </div>
-          <span class="poi-book book-no" style="white-space:nowrap;flex-shrink:0">Consigliata</span>
+        <span class="poi-tag">Edinburgh</span>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <h3>🥃 Scotch Whisky Exp.</h3>
+          <span class="poi-book bk-rec" style="flex-shrink:0;margin-left:6px">Consigliata</span>
         </div>
-        <div class="poi-loc">📍 Canongate, EH8 8DX</div>
+        <div class="poi-loc">📍 354 Castlehill EH1 2NE</div>
         <div class="poi-prices">
-          <span class="price-tag ">👤 £21</span>
-          <span class="price-tag ">👦 £10.50 (5-17)</span>
+          <span class="price-tag">👤 £16</span>
+          <span class="price-tag">👦 £8</span>
         </div>
-        <div class="orari">🕐 9:30-18:00</div>
+        <div style="font-size:.73rem;color:#666">🕐 10:00-18:00</div>
       </div>
       <div class="poi-card" data-tappa="Edinburgh">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Edinburgh</span><br>
-            <h3>⛰️ Arthur's Seat</h3>
-          </div>
-          <span class="poi-book book-no" style="white-space:nowrap;flex-shrink:0">No prenotazione</span>
+        <span class="poi-tag">Edinburgh</span>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <h3>⛰️ Arthur's Seat</h3>
+          <span class="poi-book bk-no" style="flex-shrink:0;margin-left:6px">No</span>
         </div>
         <div class="poi-loc">📍 Holyrood Park</div>
         <div class="poi-prices">
           <span class="price-tag free">👤 GRATIS 🆓</span>
           <span class="price-tag free">👦 GRATIS 🆓</span>
         </div>
-        <div class="orari">🕐 Sempre aperto</div>
-      </div>
-      <div class="poi-card" data-tappa="Edinburgh">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Edinburgh</span><br>
-            <h3>🚢 Royal Yacht Britannia</h3>
-          </div>
-          <span class="poi-book book-no" style="white-space:nowrap;flex-shrink:0">Consigliata</span>
-        </div>
-        <div class="poi-loc">📍 Ocean Dr, Leith EH6 6JJ</div>
-        <div class="poi-prices">
-          <span class="price-tag ">👤 £20</span>
-          <span class="price-tag ">👦 £9.25 (5-17)</span>
-        </div>
-        <div class="orari">🕐 10:00-16:00</div>
-      </div>
-      <div class="poi-card" data-tappa="Edinburgh">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Edinburgh</span><br>
-            <h3>🕵️ Mary King's Close</h3>
-          </div>
-          <span class="poi-book book-yes" style="white-space:nowrap;flex-shrink:0">⚠️ Prenotare (9+ anni)</span>
-        </div>
-        <div class="poi-loc">📍 2 Warriston's Close EH1 1PG</div>
-        <div class="poi-prices">
-          <span class="price-tag ">👤 £13.95</span>
-          <span class="price-tag ">👦 £8.25 (5-15)</span>
-        </div>
-        <div class="orari">🕐 Tour ogni 30min</div>
+        <div style="font-size:.73rem;color:#666">🕐 Sempre aperto</div>
       </div>
       <div class="poi-card" data-tappa="Stonehaven">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Stonehaven</span><br>
-            <h3>🏰 Dunnottar Castle</h3>
-          </div>
-          <span class="poi-book book-no" style="white-space:nowrap;flex-shrink:0">Consigliata</span>
+        <span class="poi-tag">Stonehaven</span>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <h3>🏰 Dunnottar Castle</h3>
+          <span class="poi-book bk-rec" style="flex-shrink:0;margin-left:6px">Consigliata</span>
         </div>
         <div class="poi-loc">📍 Stonehaven AB39 2TL</div>
         <div class="poi-prices">
-          <span class="price-tag ">👤 £10.50</span>
-          <span class="price-tag ">👦 £4.50 (5-15)</span>
+          <span class="price-tag">👤 £10.50</span>
+          <span class="price-tag">👦 £4.50 (5-15)</span>
         </div>
-        <div class="orari">🕐 9:00-18:00 (da 1 apr)</div>
+        <div style="font-size:.73rem;color:#666">🕐 9:00-18:00</div>
       </div>
       <div class="poi-card" data-tappa="Stonehaven">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Stonehaven</span><br>
-            <h3>🐦 RSPB Fowlsheugh</h3>
-          </div>
-          <span class="poi-book book-no" style="white-space:nowrap;flex-shrink:0">No prenotazione</span>
+        <span class="poi-tag">Stonehaven</span>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <h3>🐦 RSPB Fowlsheugh</h3>
+          <span class="poi-book bk-no" style="flex-shrink:0;margin-left:6px">No</span>
         </div>
-        <div class="poi-loc">📍 3km a sud di Stonehaven</div>
+        <div class="poi-loc">📍 3km S Stonehaven</div>
         <div class="poi-prices">
           <span class="price-tag free">👤 GRATIS 🆓</span>
           <span class="price-tag free">👦 GRATIS 🆓</span>
         </div>
-        <div class="orari">🕐 Sempre aperto</div>
+        <div style="font-size:.73rem;color:#666">🕐 Sempre aperto</div>
       </div>
       <div class="poi-card" data-tappa="Inverness">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Inverness</span><br>
-            <h3>🏰 Inverness Castle Exp.</h3>
-          </div>
-          <span class="poi-book book-no" style="white-space:nowrap;flex-shrink:0">Consigliata</span>
+        <span class="poi-tag">Inverness</span>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <h3>🏰 Inverness Castle Exp.</h3>
+          <span class="poi-book bk-rec" style="flex-shrink:0;margin-left:6px">Consigliata</span>
         </div>
-        <div class="poi-loc">📍 Castle Wynd, Inverness IV2</div>
+        <div class="poi-loc">📍 Castle Wynd IV2</div>
         <div class="poi-prices">
-          <span class="price-tag ">👤 ~£12</span>
-          <span class="price-tag ">👦 ~£6</span>
+          <span class="price-tag">👤 ~£12</span>
+          <span class="price-tag">👦 ~£6</span>
         </div>
-        <div class="orari">🕐 10:00-17:00</div>
+        <div style="font-size:.73rem;color:#666">🕐 10:00-17:00</div>
       </div>
       <div class="poi-card" data-tappa="Inverness">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Inverness</span><br>
-            <h3>⚔️ Culloden Battlefield</h3>
-          </div>
-          <span class="poi-book book-no" style="white-space:nowrap;flex-shrink:0">No prenotazione</span>
+        <span class="poi-tag">Inverness</span>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <h3>⚔️ Culloden Battlefield</h3>
+          <span class="poi-book bk-no" style="flex-shrink:0;margin-left:6px">No</span>
         </div>
-        <div class="poi-loc">📍 B9006, Inverness IV2 5EU</div>
+        <div class="poi-loc">📍 B9006 IV2 5EU</div>
         <div class="poi-prices">
-          <span class="price-tag ">👤 £13</span>
-          <span class="price-tag ">👦 Gratis / £6</span>
+          <span class="price-tag">👤 £13</span>
+          <span class="price-tag">👦 £6</span>
         </div>
-        <div class="orari">🕐 9:00-17:30</div>
-      </div>
-      <div class="poi-card" data-tappa="Inverness">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Inverness</span><br>
-            <h3>🐬 Dolphin Spirit Cruise</h3>
-          </div>
-          <span class="poi-book book-yes" style="white-space:nowrap;flex-shrink:0">⚠️ Prenotare</span>
-        </div>
-        <div class="poi-loc">📍 Shore St Quay, Inverness</div>
-        <div class="poi-prices">
-          <span class="price-tag ">👤 ~£20</span>
-          <span class="price-tag ">👦 ~£12</span>
-        </div>
-        <div class="orari">🕐 Più tour/giorno</div>
+        <div style="font-size:.73rem;color:#666">🕐 9:00-17:30</div>
       </div>
       <div class="poi-card" data-tappa="Loch Ness">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Loch Ness</span><br>
-            <h3>🏰 Urquhart Castle</h3>
-          </div>
-          <span class="poi-book book-yes" style="white-space:nowrap;flex-shrink:0">⚠️ Prenotare OBBLIGATORIO</span>
-        </div>
-        <div class="poi-loc">📍 Drumnadrochit IV63 6XJ</div>
-        <div class="poi-prices">
-          <span class="price-tag ">👤 £14.50</span>
-          <span class="price-tag ">👦 £8.70 (5-15)</span>
-        </div>
-        <div class="orari">🕐 9:30-20:15 (apr-ago)</div>
-      </div>
-      <div class="poi-card" data-tappa="Loch Ness">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Loch Ness</span><br>
-            <h3>🦕 Loch Ness Centre</h3>
-          </div>
-          <span class="poi-book book-no" style="white-space:nowrap;flex-shrink:0">Consigliata</span>
+        <span class="poi-tag">Loch Ness</span>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <h3>🏰 Urquhart Castle</h3>
+          <span class="poi-book bk-yes" style="flex-shrink:0;margin-left:6px">⚠️ OBBLIGATORIO</span>
         </div>
         <div class="poi-loc">📍 Drumnadrochit IV63</div>
         <div class="poi-prices">
-          <span class="price-tag ">👤 £15</span>
-          <span class="price-tag ">👦 £10</span>
+          <span class="price-tag">👤 £14.50</span>
+          <span class="price-tag">👦 £8.70 (5-15)</span>
         </div>
-        <div class="orari">🕐 9:00-17:00</div>
+        <div style="font-size:.73rem;color:#666">🕐 9:30-20:15</div>
       </div>
       <div class="poi-card" data-tappa="Skye">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Skye</span><br>
-            <h3>🏰 Eilean Donan Castle</h3>
-          </div>
-          <span class="poi-book book-no" style="white-space:nowrap;flex-shrink:0">Consigliata</span>
+        <span class="poi-tag">Skye</span>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <h3>🏰 Eilean Donan Castle</h3>
+          <span class="poi-book bk-rec" style="flex-shrink:0;margin-left:6px">Consigliata</span>
         </div>
         <div class="poi-loc">📍 Dornie IV40 8DX</div>
         <div class="poi-prices">
-          <span class="price-tag ">👤 £12</span>
-          <span class="price-tag ">👦 £6.50</span>
+          <span class="price-tag">👤 £12</span>
+          <span class="price-tag">👦 £6.50</span>
         </div>
-        <div class="orari">🕐 9:00-17:00</div>
+        <div style="font-size:.73rem;color:#666">🕐 9:00-17:00</div>
       </div>
       <div class="poi-card" data-tappa="Skye">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Skye</span><br>
-            <h3>🏔️ Old Man of Storr</h3>
-          </div>
-          <span class="poi-book book-no" style="white-space:nowrap;flex-shrink:0">No – arrivare PRESTO</span>
+        <span class="poi-tag">Skye</span>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <h3>🏔️ Old Man of Storr</h3>
+          <span class="poi-book bk-no" style="flex-shrink:0;margin-left:6px">Prima delle 9!</span>
         </div>
-        <div class="poi-loc">📍 A855, Trotternish, Skye</div>
+        <div class="poi-loc">📍 A855, Trotternish</div>
         <div class="poi-prices">
           <span class="price-tag free">👤 GRATIS 🆓</span>
           <span class="price-tag free">👦 GRATIS 🆓</span>
         </div>
-        <div class="orari">🕐 Sempre aperto</div>
+        <div style="font-size:.73rem;color:#666">🕐 Sempre aperto</div>
       </div>
       <div class="poi-card" data-tappa="Skye">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Skye</span><br>
-            <h3>💧 Fairy Pools</h3>
-          </div>
-          <span class="poi-book book-no" style="white-space:nowrap;flex-shrink:0">No prenotazione</span>
+        <span class="poi-tag">Skye</span>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <h3>💧 Fairy Pools</h3>
+          <span class="poi-book bk-no" style="flex-shrink:0;margin-left:6px">Parcheggio £3</span>
         </div>
-        <div class="poi-loc">📍 Glenbrittle, Skye IV47</div>
+        <div class="poi-loc">📍 Glenbrittle IV47</div>
         <div class="poi-prices">
           <span class="price-tag free">👤 GRATIS 🆓</span>
           <span class="price-tag free">👦 GRATIS 🆓</span>
         </div>
-        <div class="orari">🕐 Sempre aperto</div>
+        <div style="font-size:.73rem;color:#666">🕐 Sempre aperto</div>
       </div>
       <div class="poi-card" data-tappa="Skye">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Skye</span><br>
-            <h3>🧚 Fairy Glen</h3>
-          </div>
-          <span class="poi-book book-no" style="white-space:nowrap;flex-shrink:0">No prenotazione</span>
+        <span class="poi-tag">Skye</span>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <h3>🧚 Fairy Glen</h3>
+          <span class="poi-book bk-no" style="flex-shrink:0;margin-left:6px">No</span>
         </div>
         <div class="poi-loc">📍 Near Uig, Skye</div>
         <div class="poi-prices">
           <span class="price-tag free">👤 GRATIS 🆓</span>
           <span class="price-tag free">👦 GRATIS 🆓</span>
         </div>
-        <div class="orari">🕐 Sempre aperto</div>
+        <div style="font-size:.73rem;color:#666">🕐 Sempre aperto</div>
       </div>
       <div class="poi-card" data-tappa="Skye">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Skye</span><br>
-            <h3>🦕 Dinosaur Footprints</h3>
-          </div>
-          <span class="poi-book book-no" style="white-space:nowrap;flex-shrink:0">Verificare maree!</span>
+        <span class="poi-tag">Skye</span>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <h3>🦕 Dinosaur Footprints</h3>
+          <span class="poi-book bk-no" style="flex-shrink:0;margin-left:6px">⚠️ Verificare maree</span>
         </div>
-        <div class="poi-loc">📍 An Corran Beach, Staffin</div>
+        <div class="poi-loc">📍 An Corran, Staffin</div>
         <div class="poi-prices">
           <span class="price-tag free">👤 GRATIS 🆓</span>
           <span class="price-tag free">👦 GRATIS 🆓</span>
         </div>
-        <div class="orari">🕐 Solo bassa marea</div>
-      </div>
-      <div class="poi-card" data-tappa="Skye">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Skye</span><br>
-            <h3>🏰 Dunvegan Castle</h3>
-          </div>
-          <span class="poi-book book-no" style="white-space:nowrap;flex-shrink:0">Raccomandato</span>
-        </div>
-        <div class="poi-loc">📍 Dunvegan IV55 8WF</div>
-        <div class="poi-prices">
-          <span class="price-tag ">👤 £16</span>
-          <span class="price-tag ">👦 £9 (5-15)</span>
-        </div>
-        <div class="orari">🕐 10:00-17:00 (apr)</div>
+        <div style="font-size:.73rem;color:#666">🕐 Solo bassa marea</div>
       </div>
       <div class="poi-card" data-tappa="Pitlochry">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Pitlochry</span><br>
-            <h3>🏰 Blair Castle</h3>
-          </div>
-          <span class="poi-book book-no" style="white-space:nowrap;flex-shrink:0">Consigliata</span>
+        <span class="poi-tag">Pitlochry</span>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <h3>🏰 Blair Castle</h3>
+          <span class="poi-book bk-rec" style="flex-shrink:0;margin-left:6px">⚠️ Consigliata</span>
         </div>
         <div class="poi-loc">📍 Blair Atholl PH18 5TL</div>
         <div class="poi-prices">
-          <span class="price-tag ">👤 £14</span>
-          <span class="price-tag ">👦 £9.50 (5-15)</span>
+          <span class="price-tag">👤 £14</span>
+          <span class="price-tag">👦 £9.50 (5-15)</span>
         </div>
-        <div class="orari">🕐 10:00-17:00 (da 1 apr)</div>
+        <div style="font-size:.73rem;color:#666">🕐 10:00-17:00 (da 1 apr)</div>
       </div>
       <div class="poi-card" data-tappa="Pitlochry">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Pitlochry</span><br>
-            <h3>🥃 Blair Athol Distillery</h3>
-          </div>
-          <span class="poi-book book-no" style="white-space:nowrap;flex-shrink:0">No prenotazione</span>
-        </div>
-        <div class="poi-loc">📍 Perth Rd, Pitlochry PH16</div>
-        <div class="poi-prices">
-          <span class="price-tag ">👤 ~£10 tour</span>
-          <span class="price-tag ">👦 Gratuito</span>
-        </div>
-        <div class="orari">🕐 9:00-17:00</div>
-      </div>
-      <div class="poi-card" data-tappa="Pitlochry">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Pitlochry</span><br>
-            <h3>🌲 Hermitage Forest</h3>
-          </div>
-          <span class="poi-book book-no" style="white-space:nowrap;flex-shrink:0">No prenotazione</span>
+        <span class="poi-tag">Pitlochry</span>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <h3>🌲 Hermitage Forest</h3>
+          <span class="poi-book bk-no" style="flex-shrink:0;margin-left:6px">Parcheggio £2</span>
         </div>
         <div class="poi-loc">📍 Dunkeld PH8 0HX</div>
         <div class="poi-prices">
           <span class="price-tag free">👤 GRATIS 🆓</span>
           <span class="price-tag free">👦 GRATIS 🆓</span>
         </div>
-        <div class="orari">🕐 Sempre aperto</div>
+        <div style="font-size:.73rem;color:#666">🕐 Sempre aperto</div>
       </div>
       <div class="poi-card" data-tappa="Pitlochry">
-        <div class="poi-top">
-          <div>
-            <span style="font-size:.7rem;background:#eee;border-radius:6px;padding:2px 7px;
-                         font-weight:700;margin-bottom:5px;display:inline-block">Pitlochry</span><br>
-            <h3>🏰 Stirling Castle (opt.)</h3>
-          </div>
-          <span class="poi-book book-no" style="white-space:nowrap;flex-shrink:0">Consigliata</span>
+        <span class="poi-tag">Pitlochry</span>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <h3>🏰 Stirling Castle</h3>
+          <span class="poi-book bk-rec" style="flex-shrink:0;margin-left:6px">Consigliata</span>
         </div>
         <div class="poi-loc">📍 Stirling FK8 1EJ</div>
         <div class="poi-prices">
-          <span class="price-tag ">👤 £17</span>
-          <span class="price-tag ">👦 £10.20 (5-15)</span>
+          <span class="price-tag">👤 £17</span>
+          <span class="price-tag">👦 £10.20</span>
         </div>
-        <div class="orari">🕐 9:30-18:00</div>
+        <div style="font-size:.73rem;color:#666">🕐 9:30-18:00</div>
       </div>
     </div>
   </div>
@@ -1403,185 +1363,87 @@
 
 <!-- ═══ RISTORANTI ═══ -->
 <div id="ristoranti" class="section">
-  <div class="card" style="margin-bottom:0;border-radius:var(--radius) var(--radius) 0 0">
-    <div class="sec-head"><h2>🍽️ Ristoranti Consigliati per Famiglie</h2><p>20 ristoranti selezionati – tutti family-friendly</p></div>
+  <div class="card" style="margin-bottom:0;border-radius:var(--r) var(--r) 0 0">
+    <div class="sec-head"><h2>🍽️ Ristoranti – Solo per Cene</h2><p>I pranzi sono al sacco! Le cene sono il momento di gustare la cucina scozzese.</p></div>
   </div>
-  <div class="card" style="border-radius:0 0 var(--radius) var(--radius);margin-top:0">
+  <div class="card" style="border-radius:0 0 var(--r) var(--r);margin-top:0">
+    <div class="rest-note">🥪 <strong>Pranzi al sacco</strong> durante le escursioni = più tempo per vedere cose + risparmio ~£15/pp a pasto = ~£500+ risparmiati sull'intera settimana!</div>
     <div class="rest-grid">
       <div class="rest-card">
-        <span class="tappa-tag" style="background:#1A3A5C">Edinburgh</span>
-        <h3>🦞 Ondine Restaurant</h3>
-        <div class="cuisine">Seafood scozzese</div>
-        <div class="addr">📍 2 George IV Bridge EH1 1AD</div>
-        <div class="desc">Miglior seafood Edinburgh. ⚠️ Prenotare con settimane di anticipo!</div>
-        <div class="r-bottom">
-          <span class="r-price">£35-45/pp</span>
-          <span class="r-family">✅ Family-friendly</span>
-        </div>
-      </div>
-      <div class="rest-card">
-        <span class="tappa-tag" style="background:#1A3A5C">Edinburgh</span>
-        <h3>🧙 The Witchery</h3>
-        <div class="cuisine">Scozzese gourmet</div>
-        <div class="addr">📍 Castlehill, Royal Mile EH1 2NF</div>
-        <div class="desc">Atmosfera gotica indimenticabile. ⚠️ Prenotare 2 mesi prima</div>
-        <div class="r-bottom">
-          <span class="r-price">£40-50/pp</span>
-          <span class="r-family">✅ Family-friendly</span>
-        </div>
-      </div>
-      <div class="rest-card">
-        <span class="tappa-tag" style="background:#1A3A5C">Edinburgh</span>
-        <h3>🏠 The Mitre Bar</h3>
-        <div class="cuisine">Scozzese pub</div>
-        <div class="addr">📍 131 High St EH1 1SG</div>
-        <div class="desc">Menu bambini + pennarelli per disegnare. Vista Royal Mile</div>
-        <div class="r-bottom">
-          <span class="r-price">£15-20/pp</span>
-          <span class="r-family">✅ Family-friendly</span>
-        </div>
-      </div>
-      <div class="rest-card">
-        <span class="tappa-tag" style="background:#1A3A5C">Edinburgh</span>
-        <h3>🎶 The Highlander Edinburgh</h3>
-        <div class="cuisine">Scozzese tradiz.</div>
-        <div class="addr">📍 Royal Mile Edinburgh</div>
-        <div class="desc">Musica live ogni sera. Haggis, steak pie. Bambini benvenuti</div>
-        <div class="r-bottom">
-          <span class="r-price">£15-20/pp</span>
-          <span class="r-family">✅ Family-friendly</span>
-        </div>
-      </div>
-      <div class="rest-card">
-        <span class="tappa-tag" style="background:#5D4037">Stonehaven</span>
-        <h3>🐟 The Bay Fish & Chips</h3>
-        <div class="cuisine">Fish & Chips</div>
-        <div class="addr">📍 Beach Promenade AB39 2RA</div>
-        <div class="desc">Lonely Planet worldwide top! Haddock fresco locale</div>
-        <div class="r-bottom">
-          <span class="r-price">£10-15/pp</span>
-          <span class="r-family">✅ Family-friendly</span>
-        </div>
-      </div>
-      <div class="rest-card">
-        <span class="tappa-tag" style="background:#5D4037">Stonehaven</span>
+        <span class="sera-tag">G1 – Mar</span>
         <h3>🚢 The Ship Inn</h3>
         <div class="cuisine">Seafood scozzese</div>
-        <div class="addr">📍 Harbour St AB39 2JY</div>
-        <div class="desc">Specialità: Cullen Skink. Vista porto storico</div>
+        <div class="addr">📍 Harbour St, Stonehaven AB39 2JY</div>
+        <div class="desc">Cullen Skink (zuppa iconica!), Haddock fresco locale</div>
         <div class="r-bottom">
           <span class="r-price">£18-25/pp</span>
-          <span class="r-family">✅ Family-friendly</span>
+          <span class="r-book rb-no">✅ No prenot.</span>
         </div>
       </div>
       <div class="rest-card">
-        <span class="tappa-tag" style="background:#5D4037">Stonehaven</span>
-        <h3>🎡 Carron Fish Bar</h3>
-        <div class="cuisine">Fish & Chips</div>
-        <div class="addr">📍 20 Ann St AB39 2DA</div>
-        <div class="desc">FAMOSO per il Deep Fried Mars Bar! N.1 Scozia</div>
-        <div class="r-bottom">
-          <span class="r-price">£8-12/pp</span>
-          <span class="r-family">✅ Family-friendly</span>
-        </div>
-      </div>
-      <div class="rest-card">
-        <span class="tappa-tag" style="background:#1565C0">Inverness</span>
+        <span class="sera-tag">G2 – Mer</span>
         <h3>🎶 The Highlander Inverness</h3>
-        <div class="cuisine">Scozzese pub</div>
-        <div class="addr">📍 17 Church St IV1 1DA</div>
-        <div class="desc">Musica tradizionale dal vivo ogni sera. Bambini OK</div>
+        <div class="cuisine">Scozzese/Pub live</div>
+        <div class="addr">📍 17 Church St, Inverness IV1 1DA</div>
+        <div class="desc">Musica tradizionale live ogni sera! Haggis, steak pie. Bambini OK.</div>
         <div class="r-bottom">
           <span class="r-price">£15-20/pp</span>
-          <span class="r-family">✅ Family-friendly</span>
+          <span class="r-book rb-no">✅ No prenot.</span>
         </div>
       </div>
       <div class="rest-card">
-        <span class="tappa-tag" style="background:#1565C0">Inverness</span>
-        <h3>🍔 Coyote Burger Inverness</h3>
-        <div class="cuisine">Burger americano</div>
-        <div class="addr">📍 City centre, Ness Walk</div>
-        <div class="desc">Famosi per burger artigianali. Family-friendly</div>
-        <div class="r-bottom">
-          <span class="r-price">£12-16/pp</span>
-          <span class="r-family">✅ Family-friendly</span>
-        </div>
-      </div>
-      <div class="rest-card">
-        <span class="tappa-tag" style="background:#1565C0">Inverness</span>
-        <h3>🎸 The Auctioneers</h3>
-        <div class="cuisine">Pub classico</div>
-        <div class="addr">📍 City centre Inverness</div>
-        <div class="desc">TV per sport, perfetto per famiglie</div>
-        <div class="r-bottom">
-          <span class="r-price">£12-18/pp</span>
-          <span class="r-family">✅ Family-friendly</span>
-        </div>
-      </div>
-      <div class="rest-card">
-        <span class="tappa-tag" style="background:#2E7D32">Skye</span>
+        <span class="sera-tag">G3 – Gio</span>
         <h3>🐟 Sea Breezes</h3>
-        <div class="cuisine">Seafood fresco</div>
-        <div class="addr">📍 Marine Buildings, Portree IV51</div>
-        <div class="desc">Langoustines, scallops. Atmosfera informale sul porto</div>
+        <div class="cuisine">Seafood Skye</div>
+        <div class="addr">📍 Marine Buildings, Portree IV51 9HD</div>
+        <div class="desc">Langoustines, scallops e salmon freschissimi di Skye. Vista porto.</div>
         <div class="r-bottom">
           <span class="r-price">£20-28/pp</span>
-          <span class="r-family">✅ Family-friendly</span>
+          <span class="r-book rb-no">Consigliata</span>
         </div>
       </div>
       <div class="rest-card">
-        <span class="tappa-tag" style="background:#2E7D32">Skye</span>
-        <h3>🍕 Pizza in the Skye</h3>
-        <div class="cuisine">Pizza napoletana</div>
-        <div class="addr">📍 Food truck ~15min da Portree</div>
-        <div class="desc">MIGLIOR pizza su Skye! Prenotare online</div>
-        <div class="r-bottom">
-          <span class="r-price">£10-14/pp</span>
-          <span class="r-family">✅ Family-friendly</span>
-        </div>
-      </div>
-      <div class="rest-card">
-        <span class="tappa-tag" style="background:#2E7D32">Skye</span>
-        <h3>🍺 Tongadale Hotel</h3>
-        <div class="cuisine">Pub locale</div>
-        <div class="addr">📍 Portree IV51 9DE</div>
-        <div class="desc">Mussels consigliati. Locale vero, non turistico</div>
-        <div class="r-bottom">
-          <span class="r-price">£14-20/pp</span>
-          <span class="r-family">✅ Family-friendly</span>
-        </div>
-      </div>
-      <div class="rest-card">
-        <span class="tappa-tag" style="background:#2E7D32">Skye</span>
+        <span class="sera-tag">G4 – Ven</span>
         <h3>🥩 Antlers Bar & Grill</h3>
         <div class="cuisine">Grill / Pub</div>
-        <div class="addr">📍 Somerled Sq, Portree IV51 9EH</div>
-        <div class="desc">Fish & chips perfetti, sticky toffee pudding</div>
+        <div class="addr">📍 Somerled Square, Portree IV51 9EH</div>
+        <div class="desc">Fish & chips impeccabili. Sticky toffee pudding da sogno!</div>
         <div class="r-bottom">
           <span class="r-price">£16-22/pp</span>
-          <span class="r-family">✅ Family-friendly</span>
+          <span class="r-book rb-no">✅ No prenot.</span>
         </div>
       </div>
       <div class="rest-card">
-        <span class="tappa-tag" style="background:#6A1B9A">Pitlochry</span>
+        <span class="sera-tag">G5 – Sab</span>
         <h3>🏰 Moulin Inn (1695!)</h3>
-        <div class="cuisine">Scozzese storico</div>
-        <div class="addr">📍 11-13 Kirkmichael Rd PH16 5EH</div>
-        <div class="desc">Pub più antico d'area. Birre proprie. Atmosfera fantastica</div>
+        <div class="cuisine">Pub storico scozzese</div>
+        <div class="addr">📍 11-13 Kirkmichael Rd, Pitlochry PH16 5EH</div>
+        <div class="desc">Il pub dell'area più antico. Birre artigianali proprie. Atmosfera da film!</div>
         <div class="r-bottom">
           <span class="r-price">£16-22/pp</span>
-          <span class="r-family">✅ Family-friendly</span>
+          <span class="r-book rb-no">✅ No prenot.</span>
         </div>
       </div>
       <div class="rest-card">
-        <span class="tappa-tag" style="background:#6A1B9A">Pitlochry</span>
-        <h3>🌊 Port-na-Craig Restaurant</h3>
-        <div class="cuisine">Moderno scozzese</div>
-        <div class="addr">📍 Port-na-Craig PH16 5ND</div>
-        <div class="desc">Vista sul River Tummel. Ingredienti locali premium</div>
+        <span class="sera-tag">G6 – Dom</span>
+        <h3>🏠 The Mitre Bar</h3>
+        <div class="cuisine">Pub/Royal Mile</div>
+        <div class="addr">📍 131 High St (Royal Mile), Edinburgh EH1 1SG</div>
+        <div class="desc">Menu bambini + pennarelli per disegnare. Vista sulla Royal Mile storica.</div>
         <div class="r-bottom">
-          <span class="r-price">£22-30/pp</span>
-          <span class="r-family">✅ Family-friendly</span>
+          <span class="r-price">£15-20/pp</span>
+          <span class="r-book rb-no">✅ No prenot.</span>
+        </div>
+      </div>
+      <div class="rest-card">
+        <span class="sera-tag">G7 – Lun</span>
+        <h3>🦞 Ondine Restaurant</h3>
+        <div class="cuisine">Seafood gourmet</div>
+        <div class="addr">📍 2 George IV Bridge, Edinburgh EH1 1AD</div>
+        <div class="desc">CENA DI GALA! Miglior seafood di Edinburgh. Ultima serata indimenticabile.</div>
+        <div class="r-bottom">
+          <span class="r-price">£35-45/pp</span>
+          <span class="r-book rb-yes">⚠️ Prenota!</span>
         </div>
       </div>
     </div>
@@ -1590,292 +1452,259 @@
 
 <!-- ═══ CHECKLIST ═══ -->
 <div id="checklist" class="section">
-  <div class="card" style="margin-bottom:0;border-radius:var(--radius) var(--radius) 0 0">
-    <div class="sec-head"><h2>✅ Checklist Prenotazioni</h2>
-    <p>Aprile = alta stagione (Pasqua). Prenotare il prima possibile!</p></div>
+  <div class="card" style="margin-bottom:0;border-radius:var(--r) var(--r) 0 0">
+    <div class="sec-head"><h2>✅ Checklist Prenotazioni</h2><p>⚠️ Aprile = alta stagione Pasqua – prenotare SUBITO!</p></div>
   </div>
-  <div class="card" style="border-radius:0 0 var(--radius) var(--radius);margin-top:0">
+  <div class="card" style="border-radius:0 0 var(--r) var(--r);margin-top:0">
     <div class="check-progress">
-      <span>Progresso:</span>
+      <span style="font-size:.85rem;font-weight:600">Completato:</span>
       <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
       <span class="progress-label" id="progressLabel">0 / 14</span>
     </div>
     <div class="checklist" id="checklistContainer">
-      <div class="check-item p-red" id="ci-0">
+      <div class="check-item ci-r" id="ci-0">
         <input type="checkbox" onchange="updateProgress()" id="cb-0">
         <div class="ci-content">
           <h4>🔴 CRITICO 🚐 Van a noleggio 7 posti</h4>
-          <p>SUBITO – si esaurisce velocemente!</p><a class="ci-link" href="https://www.bunkercampers.com" target="_blank">🔗 Prenota ora</a>
-          <p style="margin-top:4px;font-size:.76rem;color:#888">7 posti, automatico. Bunk Campers, Enterprise, Arnold Clark</p>
+          <p>SUBITO – peak season Easter</p><a class="ci-link" href="https://www.arnoldclark.com/van-hire" target="_blank">🔗 Prenota ora</a>
+          <p style="font-size:.72rem;color:#888;margin-top:3px">Automatico! Seggiolini bimbi. Ritiro/riconsegna Edinburgh Airport</p>
         </div>
-        <div class="ci-cost">~£500-700 per 8 giorni</div>
+        <div class="ci-cost">~£600-700 tot</div>
       </div>
-      <div class="check-item p-red" id="ci-1">
+      <div class="check-item ci-r" id="ci-1">
         <input type="checkbox" onchange="updateProgress()" id="cb-1">
         <div class="ci-content">
           <h4>🔴 CRITICO 🏰 Edinburgh Castle</h4>
-          <p>SUBITO – sold out in peak season!</p><a class="ci-link" href="https://www.edinburghcastle.scot/plan-your-visit/tickets/" target="_blank">🔗 Prenota ora</a>
-          <p style="margin-top:4px;font-size:.76rem;color:#888">Scegliere fascia mattutina (meno affollato)</p>
+          <p>SUBITO – sold out settimane prima!</p><a class="ci-link" href="https://www.edinburghcastle.scot/plan-your-visit/tickets/" target="_blank">🔗 Prenota ora</a>
+          <p style="font-size:.72rem;color:#888;margin-top:3px">Fascia mattutina. Peak season! ⚠️</p>
         </div>
-        <div class="ci-cost">~£160 (4 adulti + 3 bimbi)</div>
+        <div class="ci-cost">~£160 (7 persone)</div>
       </div>
-      <div class="check-item p-red" id="ci-2">
+      <div class="check-item ci-r" id="ci-2">
         <input type="checkbox" onchange="updateProgress()" id="cb-2">
         <div class="ci-content">
           <h4>🔴 CRITICO 🏰 Urquhart Castle (Loch Ness)</h4>
           <p>Entro 2 settimane</p><a class="ci-link" href="https://tickets.historic-scotland.gov.uk" target="_blank">🔗 Prenota ora</a>
-          <p style="margin-top:4px;font-size:.76rem;color:#888">Timed entry system – obbligatorio prenotare</p>
+          <p style="font-size:.72rem;color:#888;margin-top:3px">Timed entry obbligatorio</p>
         </div>
         <div class="ci-cost">~£95 (7 persone)</div>
       </div>
-      <div class="check-item p-orange" id="ci-3">
+      <div class="check-item ci-r" id="ci-3">
         <input type="checkbox" onchange="updateProgress()" id="cb-3">
         <div class="ci-content">
-          <h4>🟠 ALTA 🏰 Blair Castle</h4>
-          <p>Entro 1 mese</p><a class="ci-link" href="https://atholl-estates.co.uk/blair-castle" target="_blank">🔗 Prenota ora</a>
-          <p style="margin-top:4px;font-size:.76rem;color:#888">Apre 1 Aprile!</p>
-        </div>
-        <div class="ci-cost">~£85 (7 persone)</div>
-      </div>
-      <div class="check-item p-orange" id="ci-4">
-        <input type="checkbox" onchange="updateProgress()" id="cb-4">
-        <div class="ci-content">
-          <h4>🟠 ALTA 🏰 Eilean Donan Castle</h4>
-          <p>Entro 1 mese</p><a class="ci-link" href="https://www.eileandonancastle.com/plan-your-visit/" target="_blank">🔗 Prenota ora</a>
-          <p style="margin-top:4px;font-size:.76rem;color:#888">Molto popolare</p>
-        </div>
-        <div class="ci-cost">~£75 (7 persone)</div>
-      </div>
-      <div class="check-item p-orange" id="ci-5">
-        <input type="checkbox" onchange="updateProgress()" id="cb-5">
-        <div class="ci-content">
-          <h4>🟠 ALTA 🧙 The Witchery – cena di gala</h4>
-          <p>SUBITO – 2 mesi anticipo!</p><a class="ci-link" href="https://www.thewitchery.com/reservations/" target="_blank">🔗 Prenota ora</a>
-          <p style="margin-top:4px;font-size:.76rem;color:#888">Atmosfera unica</p>
-        </div>
-        <div class="ci-cost">~£280 (7 persone)</div>
-      </div>
-      <div class="check-item p-yellow" id="ci-6">
-        <input type="checkbox" onchange="updateProgress()" id="cb-6">
-        <div class="ci-content">
-          <h4>🟡 MEDIA 🦞 Ondine Restaurant Edinburgh</h4>
-          <p>3-4 settimane prima</p><a class="ci-link" href="https://ondinerestaurant.co.uk/" target="_blank">🔗 Prenota ora</a>
-          <p style="margin-top:4px;font-size:.76rem;color:#888">Miglior seafood Edinburgh</p>
+          <h4>🔴 CRITICO 🦞 Ondine Restaurant Edinburgh</h4>
+          <p>SUBITO – molto richiesto!</p><a class="ci-link" href="https://ondinerestaurant.co.uk" target="_blank">🔗 Prenota ora</a>
+          <p style="font-size:.72rem;color:#888;margin-top:3px">Ultima cena di gala!</p>
         </div>
         <div class="ci-cost">~£250 (7 persone)</div>
       </div>
-      <div class="check-item p-yellow" id="ci-7">
+      <div class="check-item ci-o" id="ci-4">
+        <input type="checkbox" onchange="updateProgress()" id="cb-4">
+        <div class="ci-content">
+          <h4>🟠 ALTA 🏰 Blair Castle</h4>
+          <p>Entro 1 mese</p><a class="ci-link" href="https://atholl-estates.co.uk/blair-castle" target="_blank">🔗 Prenota ora</a>
+          <p style="font-size:.72rem;color:#888;margin-top:3px">Apre 1 Aprile!</p>
+        </div>
+        <div class="ci-cost">~£85 (7 persone)</div>
+      </div>
+      <div class="check-item ci-o" id="ci-5">
+        <input type="checkbox" onchange="updateProgress()" id="cb-5">
+        <div class="ci-content">
+          <h4>🟠 ALTA 🏰 Eilean Donan Castle</h4>
+          <p>Entro 1 mese</p><a class="ci-link" href="https://www.eileandonancastle.com" target="_blank">🔗 Prenota ora</a>
+          <p style="font-size:.72rem;color:#888;margin-top:3px">Molto popolare</p>
+        </div>
+        <div class="ci-cost">~£75 (7 persone)</div>
+      </div>
+      <div class="check-item ci-w" id="ci-6">
+        <input type="checkbox" onchange="updateProgress()" id="cb-6">
+        <div class="ci-content">
+          <h4>🥃 WHISKY 🥃 Talisker Distillery (Skye)</h4>
+          <p>2 settimane prima</p><a class="ci-link" href="https://www.malts.com/en-gb/distilleries/talisker" target="_blank">🔗 Prenota ora</a>
+          <p style="font-size:.72rem;color:#888;margin-top:3px">L'unica su Skye – tour sold out!</p>
+        </div>
+        <div class="ci-cost">~£60 adulti</div>
+      </div>
+      <div class="check-item ci-w" id="ci-7">
         <input type="checkbox" onchange="updateProgress()" id="cb-7">
         <div class="ci-content">
-          <h4>🟡 MEDIA 🏰 Dunnottar Castle</h4>
-          <p>1 settimana prima</p><a class="ci-link" href="https://www.dunnottarcastle.co.uk/book-now" target="_blank">🔗 Prenota ora</a>
-          <p style="margin-top:4px;font-size:.76rem;color:#888">Meno critico</p>
+          <h4>🥃 WHISKY 🥃 Dalwhinnie Distillery (A9)</h4>
+          <p>2 settimane prima</p><a class="ci-link" href="https://www.malts.com/en-gb/distilleries/dalwhinnie" target="_blank">🔗 Prenota ora</a>
+          <p style="font-size:.72rem;color:#888;margin-top:3px">Sulla A9 – obbligatoria!</p>
         </div>
-        <div class="ci-cost">~£55 (7 persone)</div>
+        <div class="ci-cost">~£45 adulti</div>
       </div>
-      <div class="check-item p-yellow" id="ci-8">
+      <div class="check-item ci-w" id="ci-8">
         <input type="checkbox" onchange="updateProgress()" id="cb-8">
         <div class="ci-content">
-          <h4>🟡 MEDIA 🐬 Dolphin Spirit Cruise Inverness</h4>
-          <p>2 settimane prima</p><a class="ci-link" href="https://www.dolphinspirit.co.uk/" target="_blank">🔗 Prenota ora</a>
-          <p style="margin-top:4px;font-size:.76rem;color:#888">Delfini nel Moray Firth</p>
+          <h4>🥃 WHISKY 🥃 Scotch Whisky Experience Edinburgh</h4>
+          <p>1 settimana prima</p><a class="ci-link" href="https://www.scotchwhiskyexperience.co.uk" target="_blank">🔗 Prenota ora</a>
+          <p style="font-size:.72rem;color:#888;margin-top:3px">Barrel ride – family!</p>
         </div>
-        <div class="ci-cost">~£100 (7 persone)</div>
+        <div class="ci-cost">~£80 adulti</div>
       </div>
-      <div class="check-item p-yellow" id="ci-9">
+      <div class="check-item ci-y" id="ci-9">
         <input type="checkbox" onchange="updateProgress()" id="cb-9">
         <div class="ci-content">
           <h4>🟡 MEDIA 🎩 Camera Obscura Edinburgh</h4>
           <p>1 settimana prima</p><a class="ci-link" href="https://www.camera-obscura.co.uk/book-tickets/" target="_blank">🔗 Prenota ora</a>
-          <p style="margin-top:4px;font-size:.76rem;color:#888">Online più economico vs cassa</p>
+          <p style="font-size:.72rem;color:#888;margin-top:3px">Online scontato</p>
         </div>
         <div class="ci-cost">~£95 (7 persone)</div>
       </div>
-      <div class="check-item p-yellow" id="ci-10">
+      <div class="check-item ci-y" id="ci-10">
         <input type="checkbox" onchange="updateProgress()" id="cb-10">
         <div class="ci-content">
-          <h4>🟡 MEDIA 🍕 Pizza in the Skye (food truck)</h4>
-          <p>Appena aprono prenotazioni</p>
-          <p style="margin-top:4px;font-size:.76rem;color:#888">Piccolo, si esaurisce presto</p>
+          <h4>🟡 MEDIA 🥃 Strathisla Distillery (A96)</h4>
+          <p>2 settimane prima</p><a class="ci-link" href="https://www.chivas.com" target="_blank">🔗 Prenota ora</a>
+          <p style="font-size:.72rem;color:#888;margin-top:3px">La più antica del Speyside!</p>
         </div>
-        <div class="ci-cost">~£70 (7 persone)</div>
+        <div class="ci-cost">~£45 adulti</div>
       </div>
-      <div class="check-item p-green" id="ci-11">
+      <div class="check-item ci-g" id="ci-11">
         <input type="checkbox" onchange="updateProgress()" id="cb-11">
         <div class="ci-content">
-          <h4>🟢 BASSA 🕵️ Real Mary King's Close</h4>
-          <p>10 giorni prima</p><a class="ci-link" href="https://www.realmarykingsclose.com/" target="_blank">🔗 Prenota ora</a>
-          <p style="margin-top:4px;font-size:.76rem;color:#888">Solo per bambini 9+ – 10enne OK</p>
+          <h4>🟢 BASSA 🏰 Dunnottar Castle</h4>
+          <p>1 settimana prima</p><a class="ci-link" href="https://www.dunnottarcastle.co.uk/book-now" target="_blank">🔗 Prenota ora</a>
+          <p style="font-size:.72rem;color:#888;margin-top:3px"></p>
         </div>
-        <div class="ci-cost">~£75 (adulti + 9+ anni)</div>
+        <div class="ci-cost">~£55 (7 persone)</div>
       </div>
-      <div class="check-item p-green" id="ci-12">
+      <div class="check-item ci-g" id="ci-12">
         <input type="checkbox" onchange="updateProgress()" id="cb-12">
         <div class="ci-content">
-          <h4>🟢 BASSA 🚢 Royal Yacht Britannia</h4>
-          <p>1 settimana prima</p><a class="ci-link" href="https://www.royalyachtbritannia.co.uk/visit/" target="_blank">🔗 Prenota ora</a>
-          <p style="margin-top:4px;font-size:.76rem;color:#888">Se avete tempo extra a Edinburgh</p>
+          <h4>🟢 BASSA 🥃 Edradour (Pitlochry)</h4>
+          <p>Pochi giorni prima</p><a class="ci-link" href="https://www.edradour.com" target="_blank">🔗 Prenota ora</a>
+          <p style="font-size:.72rem;color:#888;margin-top:3px">La più piccola!</p>
         </div>
-        <div class="ci-cost">~£90 (7 persone)</div>
+        <div class="ci-cost">~£30 adulti</div>
       </div>
-      <div class="check-item p-green" id="ci-13">
+      <div class="check-item ci-g" id="ci-13">
         <input type="checkbox" onchange="updateProgress()" id="cb-13">
         <div class="ci-content">
           <h4>🟢 BASSA 🏰 Inverness Castle Experience</h4>
           <p>Pochi giorni prima</p>
-          <p style="margin-top:4px;font-size:.76rem;color:#888">Appena riaperto</p>
+          <p style="font-size:.72rem;color:#888;margin-top:3px">Appena riaperto</p>
         </div>
         <div class="ci-cost">~£60 (7 persone)</div>
       </div>
     </div>
-    <div style="padding:16px 20px;font-size:.82rem;color:#666;border-top:1px solid #eee">
-      💡 Budget totale stimato attrazioni: <strong>~£1.500 – £2.000</strong> + Hotel già prenotati: <strong>£2.452</strong>
+    <div style="padding:12px 16px;font-size:.8rem;color:#666;border-top:1px solid #eee">
+      💰 Budget stimato attrazioni + distillerie: <strong>~£1.700-2.200</strong> &bull; Hotel già prenotati: <strong>£2.452</strong>
     </div>
   </div>
 </div>
 
 <!-- ═══ CONSIGLI ═══ -->
 <div id="consigli" class="section">
-  <div class="card" style="margin-bottom:0;border-radius:var(--radius) var(--radius) 0 0">
-    <div class="sec-head"><h2>💡 Consigli Pratici</h2><p>Tutto quello che devi sapere per il viaggio</p></div>
+  <div class="card" style="margin-bottom:0;border-radius:var(--r) var(--r) 0 0">
+    <div class="sec-head"><h2>💡 Consigli Pratici</h2></div>
   </div>
-  <div class="card" style="border-radius:0 0 var(--radius) var(--radius);margin-top:0">
+  <div class="card" style="border-radius:0 0 var(--r) var(--r);margin-top:0">
     <div class="tips-grid">
-      <div class="tip-section">
-        <div class="tip-head" style="background:#1A3A5C">🚐 Van a Noleggio</div>
-        <div class="tip-list">
-          <div class="tip-row"><span class="tip-key">Tipo veicolo</span><span class="tip-val">Mercedes Vito 9p o Ford Transit Custom – verificare seggiolini bambini</span></div>
-          <div class="tip-row"><span class="tip-key">Guida a sinistra</span><span class="tip-val">UK guida a SINISTRA. Consigliato automatico per meno stress sulle Highlands</span></div>
-          <div class="tip-row"><span class="tip-key">GPS offline</span><span class="tip-val">INDISPENSABILE – segnale assente in molte zone di Skye e Highlands</span></div>
-          <div class="tip-row"><span class="tip-key">Assicurazione</span><span class="tip-val">Full Insurance zero eccedente. Strade di Skye sono strettissime!</span></div>
-          <div class="tip-row"><span class="tip-key">Carburante</span><span class="tip-val">Fare il pieno prima delle zone remote. I distributori scarseggiano</span></div>
-          <div class="tip-row"><span class="tip-key">Compagnie</span><span class="tip-val">Arnold Clark, Enterprise, Sixt, Bunk Campers – ritiro all'aeroporto Edinburgh</span></div>
+      <div class="tip-sec">
+        <div class="tip-head" style="background:#1A3A5C">🚐 Van & Guida</div>
+        <div>
+          <div class="tip-row"><span class="tip-key">Tipo veicolo</span><span class="tip-val">Mercedes Vito 9p o Ford Transit. Verificare seggiolini bambini!</span></div>
+          <div class="tip-row"><span class="tip-key">Guida a sx</span><span class="tip-val">UK guida a SINISTRA. Consigliato automatico. Strade Skye strettissime!</span></div>
+          <div class="tip-row"><span class="tip-key">GPS offline</span><span class="tip-val">OBBLIGATORIO – segnale assente su Skye e nelle Highlands remote</span></div>
+          <div class="tip-row"><span class="tip-key">Carburante</span><span class="tip-val">Fare il pieno prima delle zone remote. Il G5 è il giorno più lungo (215km)</span></div>
+          <div class="tip-row"><span class="tip-key">Volo G1</span><span class="tip-val">Arrivo 13:40. Ritiro van + spesa: pronti alle 15:30. Stop Dundee + Dunnottar.</span></div>
+          <div class="tip-row"><span class="tip-key">Volo G8</span><span class="tip-val">Partenza 14:10. Essere all'aeroporto entro 12:30! Riconsegnare van prima.</span></div>
         </div>
       </div>
-      <div class="tip-section">
-        <div class="tip-head" style="background:#2E7D32">👨‍👩‍👧‍👦 Bambini in Viaggio</div>
-        <div class="tip-list">
-          <div class="tip-row"><span class="tip-key">Seggiolini</span><span class="tip-val">Obbligatori per legge. Il bambino di 6 anni (se < 135cm) deve avere seggiolino</span></div>
-          <div class="tip-row"><span class="tip-key">Stivali gomma</span><span class="tip-val">ESSENZIALI per tutti i bambini. Ogni escursione = fango e pozzanghere</span></div>
-          <div class="tip-row"><span class="tip-key">Età e percorsi</span><span class="tip-val">Fairy Pools, Fairy Glen, An Corran = perfetti 6-10 anni. Old Man of Storr fattibile</span></div>
-          <div class="tip-row"><span class="tip-key">Easter Egg Hunt</span><span class="tip-val">National Trust for Scotland organizza cacce alle uova pasquali – verificare date!</span></div>
-          <div class="tip-row"><span class="tip-key">Snack in auto</span><span class="tip-val">Portare snack abbondanti. Bar scarseggiano nei parchi nazionali</span></div>
-          <div class="tip-row"><span class="tip-key">Ore di guida</span><span class="tip-val">Portare giochi/tablet/cuffie. Il Giorno 5 (Skye→Pitlochry) è il più lungo: 3h30m</span></div>
+      <div class="tip-sec">
+        <div class="tip-head" style="background:#2E7D32">🥪 Pranzi al Sacco</div>
+        <div>
+          <div class="tip-row"><span class="tip-key">Quando fare</span><span class="tip-val">Preparare la sera prima o comprare al supermercato la mattina</span></div>
+          <div class="tip-row"><span class="tip-key">Cosa portare</span><span class="tip-val">Borsa termica, sacchetti gelo, thermos tè/caffè, tovaglietta impermeabile</span></div>
+          <div class="tip-row"><span class="tip-key">Risparmio</span><span class="tip-val">~£15/pp a pranzo × 7 giorni × 7 pers = ~£735 risparmiati!</span></div>
+          <div class="tip-row"><span class="tip-key">Posti migliori</span><span class="tip-val">Fairy Glen, Hermitage Forest, Loch Ness shore, Holyrood Park Edinburgh</span></div>
+          <div class="tip-row"><span class="tip-key">Snack bimbi</span><span class="tip-val">Barrette, frutta, yogurt, crackers, cioccolato, thermos con cioccolata calda</span></div>
         </div>
       </div>
-      <div class="tip-section">
-        <div class="tip-head" style="background:#E07B39">💷 Soldi & Pagamenti</div>
-        <div class="tip-list">
-          <div class="tip-row"><span class="tip-key">Valuta</span><span class="tip-val">Sterline (£). Carte accettate ovunque, ma tenere contanti per parcheggi/mercatini</span></div>
-          <div class="tip-row"><span class="tip-key">Budget giornaliero</span><span class="tip-val">~£80-100/giorno famiglia per vitto + parcheggi + extra (escluse attrazioni prenotate)</span></div>
-          <div class="tip-row"><span class="tip-key">Mance</span><span class="tip-val">Non obbligatorie, ma 10-15% nei ristoranti è apprezzato</span></div>
-          <div class="tip-row"><span class="tip-key">Parcheggi</span><span class="tip-val">Old Man of Storr £2-3, Fairy Pools £3, Hermitage £2. Molti siti hanno parcheggio</span></div>
+      <div class="tip-sec">
+        <div class="tip-head" style="background:#8B4513">🥃 Whisky con Bambini</div>
+        <div>
+          <div class="tip-row"><span class="tip-key">Bambini OK?</span><span class="tip-val">Le aree esterne delle distillerie sono sempre accessibili gratuitamente</span></div>
+          <div class="tip-row"><span class="tip-key">Max 2/giorno</span><span class="tip-val">Con bambini, non più di 1-2 distillerie al giorno o si annoiano</span></div>
+          <div class="tip-row"><span class="tip-key">Priorità</span><span class="tip-val">Talisker ⭐ Skye, Strathisla ⭐ A96, Dalwhinnie ⭐ A9, Scotch Whisky Exp. ⭐ Edimburgo</span></div>
+          <div class="tip-row"><span class="tip-key">Soft drinks</span><span class="tip-val">Le distillerie Highland hanno sempre soft drink e snack per i bambini</span></div>
+          <div class="tip-row"><span class="tip-key">Souvenir</span><span class="tip-val">Mini bottle da 5cl è il souvenir perfetto, pesa niente in valigia!</span></div>
         </div>
       </div>
-      <div class="tip-section">
-        <div class="tip-head" style="background:#6B3FA0">📱 Connettività</div>
-        <div class="tip-list">
-          <div class="tip-row"><span class="tip-key">SIM UK</span><span class="tip-val">Considerare SIM UK (EE, O2) o eSIM. Roaming UE non copre zone remote</span></div>
-          <div class="tip-row"><span class="tip-key">Skye</span><span class="tip-val">Segnale MOLTO SCARSO su gran parte dell'isola. Scaricare mappe offline PRIMA</span></div>
-          <div class="tip-row"><span class="tip-key">App utili</span><span class="tip-val">Google Maps offline, AccuWeather, what3words (emergenze), VisitScotland</span></div>
-          <div class="tip-row"><span class="tip-key">WiFi hotel</span><span class="tip-val">Tutti gli hotel prenotati hanno WiFi. Usare per pianificare il giorno successivo</span></div>
+      <div class="tip-sec">
+        <div class="tip-head" style="background:#6B3FA0">👨‍👩‍👧‍👦 Bambini</div>
+        <div>
+          <div class="tip-row"><span class="tip-key">Seggiolini</span><span class="tip-val">Obbligatori per legge. Bambino di 6 anni (&lt;135cm) = seggiolino</span></div>
+          <div class="tip-row"><span class="tip-key">Stivali gomma</span><span class="tip-val">ESSENZIALI! Ogni escursione = fango e pozzanghere (li adoreranno)</span></div>
+          <div class="tip-row"><span class="tip-key">Percorsi ok</span><span class="tip-val">Fairy Glen, An Corran, Hermitage, Blair Castle playground: tutti 6+ anni</span></div>
+          <div class="tip-row"><span class="tip-key">In van</span><span class="tip-val">G5 = 3h30m di guida. Portare tablet/giochi/cuffie per il percorso più lungo</span></div>
+          <div class="tip-row"><span class="tip-key">Easter Hunt</span><span class="tip-val">NTS organizza Easter Egg Hunts – verificare date su nts.org.uk</span></div>
         </div>
       </div>
-      <div class="tip-section">
-        <div class="tip-head" style="background:#C0392B">⚠️ Sicurezza & Emergenze</div>
-        <div class="tip-list">
-          <div class="tip-row"><span class="tip-key">Emergenze UK</span><span class="tip-val">Numero: 999 (polizia, ambulanza, pompieri). 112 funziona anche da cellulare</span></div>
-          <div class="tip-row"><span class="tip-key">Meteo</span><span class="tip-val">Controllare Met Office Scotland prima di ogni escursione. Cambia rapidamente!</span></div>
-          <div class="tip-row"><span class="tip-key">Farmaci</span><span class="tip-val">Portare paracetamolo bimbi, antistaminici, cerotti, crema solare, antidiarroico</span></div>
-          <div class="tip-row"><span class="tip-key">Assicurazione</span><span class="tip-val">Avere copertura sanitaria TEAM europeo o assicurazione viaggio adeguata</span></div>
+      <div class="tip-sec">
+        <div class="tip-head" style="background:#C0392B">⚠️ Emergenze</div>
+        <div>
+          <div class="tip-row"><span class="tip-key">Emergenze</span><span class="tip-val">Numero UK: 999 (polizia, ambulanza, pompieri). 112 da cellulare</span></div>
+          <div class="tip-row"><span class="tip-key">Meteo</span><span class="tip-val">Controllare Met Office Scotland OGNI mattina prima di escursioni</span></div>
+          <div class="tip-row"><span class="tip-key">Farmaci</span><span class="tip-val">Paracetamolo bimbi, antistaminici, cerotti, crema solare, antinausea viaggio</span></div>
+          <div class="tip-row"><span class="tip-key">TEAM card</span><span class="tip-val">Portare tessera sanitaria europea per tutti i componenti del gruppo</span></div>
+          <div class="tip-row"><span class="tip-key">SIM UK</span><span class="tip-val">Considerare SIM UK (EE/O2) o eSIM. Il roaming italiano non funziona su Skye</span></div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-</div><!-- /main -->
-
+</div>
 <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲</button>
-
 <footer>
-  <strong>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Roadtrip Scozia – Aprile 2025</strong><br>
-  Mauro & famiglia &bull; 7 persone &bull; 8 giorni indimenticabili nelle Highlands
+  <strong>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Roadtrip Scozia – Aprile 2025 v2</strong><br>
+  Mauro & famiglia &bull; Milano 12:00 → Edinburgh 13:40 &bull; Rientro Edinburgh 14:10 → Milano 17:35<br>
+  🥪 Pranzi al sacco &bull; 🥃 Speyside + Talisker + Dalwhinnie + Scotch Whisky Experience
 </footer>
 
 <script>
-function switchTab(id, el) {
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+function switchTab(id,el){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   el.classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
 }
-
-function toggleDay(el) {
-  const body = el.nextElementSibling;
-  const isOpen = body.classList.contains('open');
+function toggleDay(el){
+  const body=el.nextElementSibling;
   body.classList.toggle('open');
   el.classList.toggle('expanded');
 }
-
-function filterPoi(tappa, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+function filterPoi(t,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
-  document.querySelectorAll('.poi-card').forEach(card => {
-    if (tappa === 'all' || card.dataset.tappa === tappa) {
-      card.style.display = '';
-    } else {
-      card.style.display = 'none';
-    }
+  document.querySelectorAll('.poi-card').forEach(c=>{
+    c.style.display=(t==='all'||c.dataset.tappa===t)?'':'none';
   });
 }
-
-function updateProgress() {
-  const total = document.querySelectorAll('#checklistContainer input[type=checkbox]').length;
-  const checked = document.querySelectorAll('#checklistContainer input[type=checkbox]:checked').length;
-  const pct = Math.round(checked / total * 100);
-  document.getElementById('progressFill').style.width = pct + '%';
-  document.getElementById('progressLabel').textContent = checked + ' / ' + total;
-  // Mark done
-  document.querySelectorAll('.check-item').forEach(item => {
-    const cb = item.querySelector('input[type=checkbox]');
-    item.classList.toggle('done', cb.checked);
+function updateProgress(){
+  const total=document.querySelectorAll('#checklistContainer input[type=checkbox]').length;
+  const checked=document.querySelectorAll('#checklistContainer input[type=checkbox]:checked').length;
+  const pct=Math.round(checked/total*100);
+  document.getElementById('progressFill').style.width=pct+'%';
+  document.getElementById('progressLabel').textContent=checked+' / '+total;
+  document.querySelectorAll('.check-item').forEach(item=>{
+    item.classList.toggle('done',item.querySelector('input').checked);
   });
-  // Save to localStorage
-  const state = {};
-  document.querySelectorAll('#checklistContainer input[type=checkbox]').forEach((cb, i) => {
-    state['cb-'+i] = cb.checked;
-  });
-  try { localStorage.setItem('scozia-checklist', JSON.stringify(state)); } catch(e) {}
+  try{const s={};document.querySelectorAll('#checklistContainer input').forEach((cb,i)=>{s['cb-'+i]=cb.checked});
+    localStorage.setItem('scozia25-v2',JSON.stringify(s));}catch(e){}
 }
-
-// Restore checkbox state
-try {
-  const saved = JSON.parse(localStorage.getItem('scozia-checklist') || '{}');
-  Object.entries(saved).forEach(([id, val]) => {
-    const el = document.getElementById(id);
-    if (el) el.checked = val;
-  });
+try{
+  const saved=JSON.parse(localStorage.getItem('scozia25-v2')||'{}');
+  Object.entries(saved).forEach(([id,v])=>{const el=document.getElementById(id);if(el)el.checked=v;});
   updateProgress();
-} catch(e) {}
-
-// Scroll top button
-window.addEventListener('scroll', () => {
-  document.getElementById('scrollTop').classList.toggle('show', window.scrollY > 400);
+}catch(e){}
+window.addEventListener('scroll',()=>{
+  document.getElementById('scrollTop').classList.toggle('show',window.scrollY>400);
 });
-
-// Auto-expand today
-const today = new Date();
-// Aprile 2025 = mesi 3 (0-indexed), giorno 1 = index 0
-if (today.getFullYear() === 2025 && today.getMonth() === 3) {
-  const dayIndex = today.getDate() - 1;
-  const dayCards = document.querySelectorAll('.day-card');
-  if (dayCards[dayIndex]) {
-    dayCards[dayIndex].querySelector('.day-head').click();
-    dayCards[dayIndex].scrollIntoView({behavior:'smooth', block:'center'});
-  }
-}
 </script>
 </body>
 </html>
